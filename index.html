@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+	    <meta name="author" content="">
+	    <link rel="icon" href="">
+		<title>Integração</title>
+		<!-- CSS Bootstrap -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<!-- CSS Custom -->
+		<link rel="stylesheet" type="text/css" href="css/custom.css">
+		<!-- JS Bootstrap -->
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="js/popper.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<!-- [Icons] IcoMoon-->
+		<link rel="stylesheet" type="text/css" href="css/icomoon/style.css">
+	</head>
+	<body class="ats-body">
+		<div class="container-fluid ats-banner">
+			<div class="logo">
+				<i class="icon-ats-logo-juntas"></i>
+			</div>
+			<div class="container">
+				<div class="row">					
+					<div class="col-lg-6 col-md-12 ats-banner-txt">
+						<h1>Integração mais simples</h1>
+						<p>Portal de integração das juntas comerciais para facilitar e agilizar o processo de abertura de filiais em outros estados.</p>
+						<p>Se você é novo usuário basta se casdastrar para utilizar o serviço.</p>
+						<a href="#" data-toggle="modal" data-target="#modalLoginCadastroDeUsuario">
+							<button type="button" class="btn btn-lg btn-outline-light">Cadastre-se</button>
+						</a>	
+					</div>
+					<div class="col-lg-6 col-md-12">
+						<form>
+							<div class="ats-login">
+								<h2>Entrar</h2>	
+							  	<div class="form-group">
+								    <!-- [Email] --><input type="email" class="form-control form-control-lg" id="loginEmailCPF" aria-describedby="emailHelp" placeholder="Email ou CPF">
+							  	</div>
+							  	<div class="form-group">
+								    <!-- [Senha] --><input type="password" class="form-control form-control-lg" id="loginSenha" placeholder="Senha">
+							  	</div>
+							  	<div class="ats-btn-login">
+							  		<a href="painel.html" class="btn btn-lg ats-btn-lg">Entrar</a>
+							  	</div>
+							</div> 
+							<!-- Inserir links de recuperação e alteração de senha aqui -->
+							<div class="row ats-login-footer align-items-center">
+								<div class="col">
+									<a href="#" data-toggle="modal" data-target="#modalAlterarSenha">
+										<i class="icon-ats-alterarSenha"></i>
+										Alterar senha
+									</a>
+								</div>
+								<div class="col">
+									<a href="#" data-toggle="modal" data-target="#modalEsqueceuASenha" class="float-right">
+										<i class="icon-ats-lembrar"></i>
+										Esqueceu a senha?
+									</a>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>				
+				<footer>
+				<!-- Colocar Logo das Juntas Aqui -->
+				</footer>
+			</div>
+			<div class="ats-space d-none d-sm-block d-md-block"></div>
+		</div>
+		<!--[Modal: Novo Cadastro] -->
+		<div class="modal fade" id="modalLoginCadastroDeUsuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Cadastro de Novo Usuário</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body ats-modal">
+						<!-- Conteúdo do Corpo do Modal -->
+						<form>
+							<div class="form-row">
+								<div class="form-group col-md-12">
+									<label for="loginCadastrarNome">Nome*</label>
+									<input type="email" class="form-control" id="loginCadastrarNome" placeholder=""  required="">
+								</div>
+								<div class="form-group col-md-12">
+									<label for="loginCadastrarEmail">Email*</label>
+									<input type="email" class="form-control" id="loginCadastrarEmail" placeholder=""  required="">
+								</div>
+								<div class="form-group col-md-12">
+									<label for="loginCadastrarCPF">CPF*</label>
+									<input type="text" class="form-control" id="loginCadastrarCPF" placeholder="" required="">
+								</div>
+								<div class="form-group col-md-12">
+									<label for="loginCadastrarNovaSenha">Nova Senha*</label>
+									<input type="text" class="form-control" id="loginCadastrarNovaSenha" placeholder="" required>
+								</div>
+								<div class="form-group col-md-12">
+									<label for="loginCadastrarConfirmarSenha">Confirmação de Senha*</label>
+									<input type="text" class="form-control" id="loginCadastrarConfirmarSenha" placeholder="" required>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-dark" data-dismiss="modal">Cancelar</button>
+								<button type="submit" class="btn btn-primary">Cadastrar</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--[Modal: Alterar Senha]-->
+		<div class="modal fade" id="modalAlterarSenha" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Alterar Senha</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body ats-modal">
+						<!-- Conteúdo do Corpo do Modal -->
+						<form>
+							<div class="form-row">
+								<div class="form-group col col-sm-12">
+									<label for="loginAltEmailCPF">Alterar Email ou CPF</label>
+									<input type="email" class="form-control" id="loginAltEmailCPF" placeholder="">
+								</div>
+								<div class="form-group col col-sm-12">
+									<label for="loginAltSenahAtual">Senha Atual</label>
+									<input type="text" class="form-control" id="loginAltSenahAtual" placeholder="" required="">
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group col col-sm-12">
+									<label for="loginAltNovaSenha">Nova Senha</label>
+									<input type="text" class="form-control" id="loginAltNovaSenha" placeholder="" required>
+								</div>
+								<div class="form-group col col-sm-12">
+									<label for="loginAltConfirmarSenha">Confirmar Nova Senha</label>
+									<input type="text" class="form-control" id="loginAltConfirmarSenha" placeholder="" required>
+								</div>
+							</div>		
+							<div class="modal-footer">
+								<button type="button" class="btn btn-dark" data-dismiss="modal">Cancelar</button>
+								<button type="submit" class="btn btn-primary">Confirmar</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- [Modal: Esqueceu a Senha?] -->
+		<div class="modal fade" id="modalEsqueceuASenha" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Esqueci Minha Senha</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<!-- Conteúdo do Corpo do Modal -->
+						<div class="form-row">
+							<div class="form-group col col-sm-12">
+								<label for="loginRecuperarEmailCPF">Informe seu e-mail ou CPF para receber um e-mail para redefinição de sua senha</label> 
+								<input type="email" class="form-control" id="loginRecuperarEmailCPF" placeholder="">
+							</div>
+						</div>	
+						<div class="modal-footer">
+							<button type="button" class="btn btn-dark" data-dismiss="modal">Cancelar</button>
+							<button type="submit" class="btn btn-primary">Confirmar</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

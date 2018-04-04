@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+	    <meta name="author" content="">
+	    <link rel="icon" href="">
+		<title>Integração</title>
+		<!-- CSS Bootstrap -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<!-- CSS Custom -->
+		<link rel="stylesheet" type="text/css" href="css/custom.css">
+		<!-- [Icons] IcoMoon-->
+		<link rel="stylesheet" type="text/css" href="css/icomoon/style.css">
+		<!-- JS Bootstrap -->
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="js/popper.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<!-- JS Global -->
+		<script type="text/javascript" src="js/global.js"></script>
+	</head>
+	<body class="ats-bg-cinza">
+		<div class="container-fluid">
+			<div class="row">
+				<aside class="col-lg-2 col-md-3 ats-sidebar">
+					<nav>
+						<a href="painel.html">
+							<div class="ats-logo">
+								<!-- <i class="icon-ats-logo-juntas"></i> -->
+								<img src="img/ats-logo-juntas.svg">
+							</div>
+						</a>
+						<ul>
+							<li class="fix-borderbottom">
+								<a href="#" class="ats-icoUser" data-toggle="collapse" data-target="#li-item1" aria-expanded="false" aria-controls="collapseExample">
+								<i class="icon-ats-user"></i>Usuário</a>
+								<li>
+									<div class="collapse ats-sublist" id="li-item1">
+										<a href="alterar-dados-cadastrais.html"><i class="icon-ats-userAlterarDatos"></i>Alterar Dados Cadastrais</a>
+										<a href="#" data-toggle="modal" data-target="#modalAlterarSenha"><i class="icon-ats-userAlterarSenha "></i>Alterar Senha</a>
+									</div>
+								</li>	
+							</li>
+							<li>
+								<a href="index.html"><i class="icon-ats-sair"></i>Sair</a>
+							</li>
+						</ul>
+					</nav>	
+				</aside>
+				<section class="ats-topbar">
+					<nav class="navbar navbar-expand-lg navbar-light">
+						<a class="navbar-brand" href="painel.html">
+							<img src="img/ats-logotipo.svg" width="190" height="auto" alt="Logotipo" title="Logo Juntas Comerciais Integração">
+						</a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav mr-auto">
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								  Usuário
+									</a>
+									<div class="dropdown-menu ats-topbar-dropdown" aria-labelledby="navbarDropdown">
+								  		<a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalAlterarSenha">Alterar Senha</a>
+									</div>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="index.html">Sair</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</section>
+				<main class="col-lg-10 col-md-9 ml-sm-auto ">
+					<section class="container ats-painel">
+						<div class="row">
+							<h1>iniciar</h1>
+						</div>
+						<div class="row ats-cards">
+							<!-- [Card 1] -->
+							<div class="col-lg-4 col-sm-6">
+								<div id="card-1" class="card">
+									<a href="consultar-usuarios.html" class="fix-borderTop">	
+										<div class="card-body">
+									  		<i id="icon-1" class="icon-ats-userCosulta"></i>
+									    	<h2 id="title-1">Consultar<br>Usuário</h2>
+										</div>
+									</a>
+								</div>
+							</div>
+							<!-- [Card 2] -->
+							<div class="col-lg-4 col-sm-6">
+								<div id="card-2" class="card">
+									<a href="cadastro-de-usuarios.html" class="fix-borderTop">	
+										<div class="card-body">
+									  		<i id="icon-2" class="icon-ats-userAdd"></i>
+									    	<h2 id="title-2">Incluir<br> Usuário</h2>
+										</div>
+									</a>
+								</div>
+							</div>
+							<!-- [Card 3] -->
+							<div class="col-lg-4 col-sm-6">
+								<div id="card-3" class="card">
+									<a href="complementacao-de-protocolo.html" class="fix-borderTop">
+										<div class="card-body">
+									  		<i id="icon-3" class="icon-ats-protocoloComplementar"></i>
+									    	<h2 id="title-3">Complementação<br> de Protocolo</h2>
+										</div>
+									</a>
+								</div>
+							</div>
+							<!-- [Card 4] -->
+							<div class="col-lg-4 col-sm-6">
+								<div id="card-4" class="card">
+									<a href="consulta-de-protocolos--modJunta.html" class="fix-borderTop">
+										<div class="card-body">
+									  		<i id="icon-4" class="icon-ats-protocolo"></i>
+									    	<h2 id="title-4">Consulta<br class="d-none d-lg-block"> de Protocolos</h2>
+										</div>
+									</a>
+								</div>
+							</div>
+							<!-- [Card 5] -->
+							<div class="col-lg-4 col-sm-6">
+								<div id="card-5" class="card">
+									<a href="envio-de-protocolo-para-modulo-cidadao.html" class="fix-borderTop">	
+										<div class="card-body">
+									  		<i id="icon-5" class="icon-ats-protocoloEnviar"></i>
+									    	<h2 id="title-5">Envio de<br> Protocolos</h2>
+										</div>
+									</a>
+								</div>
+							</div>
+							<!-- [Card 6] -->
+							<div class="col-lg-4 col-sm-6">
+								<div id="card-6" class="card">
+									<a href="recebimento-protocolo-do-modulo-cidadao.html" class="fix-borderTop">
+										<div class="card-body">
+									  		<i id="icon-6"class="icon-ats-protocoloReceber"></i>
+									    	<h2 id="title-6">Recebimento<br> de Protocolos</h2>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>	
+					</section>	
+				</main>
+			</div>
+		</div>
+		<!--[Modal: Alterar Senha]-->
+		<div class="modal fade" id="modalAlterarSenha" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Alterar Senha</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body ats-modal">
+						<!-- Conteúdo do Corpo do Modal -->
+						<form>
+							<div class="form-row">
+								<div class="form-group col col-sm-12">
+									<label for="loginAltEmailCPF">Alterar Email ou CPF</label>
+									<input type="email" class="form-control" id="loginAltEmailCPF" placeholder="">
+								</div>
+								<div class="form-group col col-sm-12">
+									<label for="loginAltSenahAtual">Senha Atual</label>
+									<input type="text" class="form-control" id="loginAltSenahAtual" placeholder="" required="">
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group col col-sm-12">
+									<label for="loginAltNovaSenha">Nova Senha</label>
+									<input type="text" class="form-control" id="loginAltNovaSenha" placeholder="" required>
+								</div>
+								<div class="form-group col col-sm-12">
+									<label for="loginAltConfirmarSenha">Confirmar Nova Senha</label>
+									<input type="text" class="form-control" id="loginAltConfirmarSenha" placeholder="" required>
+								</div>
+							</div>		
+							<div class="modal-footer">
+								<button type="button" class="btn btn-dark" data-dismiss="modal">Cancelar</button>
+								<button type="submit" class="btn btn-primary">Confirmar</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

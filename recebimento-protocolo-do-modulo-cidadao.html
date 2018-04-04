@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+	    <meta name="author" content="">
+	    <link rel="icon" href="">
+		<title>recebimento Protocolo para o Módulo Cidadão</title>
+		<!-- CSS Bootstrap -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<!-- CSS Custom -->
+		<link rel="stylesheet" type="text/css" href="css/custom.css">
+		<!-- JS Bootstrap -->
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="js/popper.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<!-- [Icons] IcoMoon-->
+		<link rel="stylesheet" type="text/css" href="css/icomoon/style.css">
+	</head>
+	<body class="ats-bg-cinza">
+		<div class="container-fluid">
+			<div class="row">
+				<aside class="col-lg-2 col-md-3 ats-sidebar">
+					<nav>
+						<a href="painel.html">
+							<div class="ats-logo">
+								<!-- <i class="icon-ats-logo-juntas"></i> -->
+								<img src="img/ats-logo-juntas.svg">
+							</div>
+						</a>
+						<ul>
+							<li class="fix-borderbottom">
+								<a href="#" class="ats-icoUser" data-toggle="collapse" data-target="#li-item1" aria-expanded="false" aria-controls="collapseExample">
+								<i class="icon-ats-user"></i>Usuário</a>
+								<li>
+									<div class="collapse ats-sublist" id="li-item1">
+										<a href="alterar-dados-cadastrais.html"><i class="icon-ats-userAlterarDatos"></i>Alterar Dados Cadastrais</a>
+										<a href="#" data-toggle="modal" data-target="#modalAlterarSenha"><i class="icon-ats-userAlterarSenha "></i>Alterar Senha</a>
+									</div>
+								</li>	
+							</li>
+							<li>
+								<a href="index.html"><i class="icon-ats-sair"></i>Sair</a>
+							</li>
+						</ul>
+					</nav>	
+				</aside>
+				<section class="ats-topbar">
+					<nav class="navbar navbar-expand-lg navbar-light">
+						<a class="navbar-brand" href="painel.html">
+							<img src="img/ats-logotipo.svg" width="190" height="auto" alt="Logotipo" title="Logo Juntas Comerciais Integração">
+						</a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav mr-auto">
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								  Usuário
+									</a>
+									<div class="dropdown-menu ats-topbar-dropdown" aria-labelledby="navbarDropdown">
+								  		<a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalAlterarSenha">Alterar Senha</a>
+									</div>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="index.html">Sair</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</section>
+				<main class="col-lg-10 col-md-9 ml-sm-auto ">
+					<section class="container ats-painel">
+						<nav aria-label="breadcrumb">
+							<a href="javascript:window.history.go(-1)" class="ats-bread"><i class="icon-arrow-left2"></i></a>
+							<ol class="breadcrumb">
+						    	<li class="breadcrumb-item"><a href="painel.html">Inicio</a></li>
+						    	<li class="breadcrumb-item">Receber Protocolos</li>
+							</ol>
+						</nav>
+						<div class="row">
+							<h1>Recebimento de Protocolo do Módulo Cidadão</h1>
+						</div>
+						<form>
+							<div class="form-row">
+								<div class="form-group col-lg-3 col-md-6">
+									<label for="recebimentoNPedido">Nº do Pedido</label>
+									<input type="text" class="form-control" id="recebimentoNPedido" placeholder="" disabled>
+								</div>
+								<div class="form-group col-lg-3 col-md-6">
+									<label for="recebimentoNProtocolo">Nº do Protocolo</label>
+									<input type="text" class="form-control" id="recebimentoNProtocolo" placeholder="" disabled>
+								</div>
+								<div class="form-group col-lg-3 col-md-6">
+									<label for="recebimentoDataDeEntrada">Data de Entrada</label>
+									<input type="text" class="form-control" id="recebimentoDataDeEntrada" placeholder="" disabled>
+								</div>
+								<div class="form-group col-lg-3 col-md-6">
+									<label for="recebimentoNDoArquivamento">Nº do Arquivamento</label>
+									<input type="text" class="form-control" id="recebimentoNDoArquivamento" placeholder="" disabled>
+								</div>
+								<div class="form-group col-lg-4 col-md-6">
+									<label for="recebimentoDataDoArquivamento">Data do Arquivamento</label>
+									<input type="text" class="form-control" id="recebimentoDataDoArquivamento" placeholder="" disabled>
+								</div>
+								<div class="form-group col-lg-4 col-md-6">
+									<label for="recebimentoNireDaSede">NIRE da Sede</label>
+									<input type="text" class="form-control" id="recebimentoNireDaSede" placeholder="" disabled>
+								</div>
+								<div class="form-group col-lg-4 col-md-6">
+									<label for="recebimentoCnpjDaSede">CNPJ da Sede</label>
+									<input type="text" class="form-control" id="recebimentoCnpjDaSede" placeholder=""  disabled>
+								</div>
+								<div class="form-group col-lg-6 col-md-12">
+									<label for="recebimentoNomeEmpresarial">Nome Empresarial</label>
+									<input type="text" class="form-control" id="recebimentoNomeEmpresarial" placeholder=""  disabled>
+								</div>
+								<div class="form-group col-lg-6 col-md-12">
+									<label for="recebimentoJuntaDeOrigem">Junta Comercial de Origem</label>
+									<input type="text" class="form-control" id="recebimentoJuntaDeOrigem" placeholder=""  disabled>
+								</div>
+							</div>
+							<fieldset>
+								<legend>Identificação do Cidadão</legend>
+								<div class="form-row">
+									<div class="form-group col">
+										<label for="recebimentoHashDoProtcolo">Hash do Protcolo</label>
+										<input type="text" class="form-control" id="recebimentoHashDoProtcolo" placeholder="" disabled>
+									</div>
+									<div class="form-group col">
+										<label for="recebimentoEmail">Email</label>
+										<input type="text" class="form-control" id="recebimentoEmail" placeholder="" disabled>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-group col">
+										<label for="recebimentoCPF">CPF</label>
+										<input type="text" class="form-control" id="recebimentoCPF" placeholder="" disabled>
+									</div>
+									<div class="form-group col">
+										<label for="recebimentoNome">Nome</label>
+										<input type="text" class="form-control" id="recebimentoNome" placeholder="" disabled>
+									</div>
+								</div>
+							</fieldset>
+							<fieldset>
+								<legend>Destino</legend>
+								<div class="form-row">
+									<div class="form-group col">
+									    <label for="recebimentoJuntasDisponiveis">Juntas Comerciais Disponiveis</label>
+									    <select class="form-control" id="recebimentoJuntasDisponiveis">
+											<option>AC - Acre</option>
+											<option>AL - Alagoas</option>
+											<option>AM - Amazonas</option>
+											<option>BA - Bahia</option>
+											<option>CE Ceará</option>
+									    </select>
+									</div>	
+								</div>
+								<div class="form-row">
+									<div class="form-group col">
+										<label for="recebimentoNProtocoldoCidadao">Nº do Procolo</label>
+										<input type="text" class="form-control" id="recebimentoNProtocoldoCidadao" placeholder="" disabled>
+									</div>
+									<div class="form-group col">
+									    <label for="recebimentoResultado">Resultado</label>
+									    <select class="form-control" id="recebimentoJuntasDisponiveis">
+											<option>Selecione Resultado</option>
+											<option>Resultado 1</option>
+											<option>Resultado 2</option>
+											<option>Resultado 3</option>
+											<option>Resultado 4</option>
+									    </select>
+									</div>
+								</div>
+								<h3>Complementação dos Arquivos</h3>
+								<!-- [TABELA] -->	
+								<div class="form-row">
+									<div class="table-responsive">
+										<table class="table table-hover">
+											<thead class="thead-dark">
+												<tr>
+													<th scope="col">UF</th>
+													<th scope="col">NIRE</th>
+													<th scope="col">CNPJ</th>
+													<th scope="col">DBE - Recibo</th>
+													<th scope="col">DBE - Identificação</th>
+													<th scope="col">Nº Viabilidade</th>
+													<th scope="col">Endereço</th>
+													<th scope="col">Aprovado</th>
+													<th scope="col">Exigência</th>
+
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="row"></th>
+													<td>
+														<input type="text" class="form-control form-control-sm" id="compDbeRecibo-1" placeholder="">
+													</td>
+													<td>
+														<input type="text" class="form-control form-control-sm" id="compDbeRecibo-1" placeholder="">
+													</td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td>
+														<div class="custom-control custom-checkbox">
+															<input type="checkbox" class="custom-control-input" id="customCheck1">
+															<label class="custom-control-label" for="customCheck1">&nbsp;</label>
+														</div>
+													</td>
+													<td>
+														<input type="text" class="form-control form-control-sm" id="compDbeRecibo-1" placeholder="">
+													</td>
+												</tr>
+												<tr>
+													<th scope="row"></th>
+													<td>
+														<input type="text" class="form-control form-control-sm" id="compDbeRecibo-1" placeholder="">
+													</td>
+													<td>
+														<input type="text" class="form-control form-control-sm" id="compDbeRecibo-1" placeholder="">
+													</td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td>
+														<div class="custom-control custom-checkbox">
+															<input type="checkbox" class="custom-control-input" id="customCheck2">
+															<label class="custom-control-label" for="customCheck2">&nbsp;</label>
+														</div>
+													</td>
+													<td>
+														<input type="text" class="form-control form-control-sm" id="compDbeRecibo-1" placeholder="">
+													</td>
+												</tr>
+												<tr>
+													<th scope="row"></th>
+													<td>
+														<input type="text" class="form-control form-control-sm" id="compDbeRecibo-1" placeholder="">
+													</td>
+													<td>
+														<input type="text" class="form-control form-control-sm" id="compDbeRecibo-1" placeholder="">
+													</td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td>
+														<div class="custom-control custom-checkbox">
+															<input type="checkbox" class="custom-control-input" id="customCheck3">
+															<label class="custom-control-label" for="customCheck3">&nbsp;</label>
+														</div>
+													</td>
+													<td>
+														<input type="text" class="form-control form-control-sm" id="compDbeRecibo-1" placeholder="">
+													</td>
+												</tr>
+												<tr>
+													<th scope="row"></th>
+													<td>
+														<input type="text" class="form-control form-control-sm" id="compDbeRecibo-1" placeholder="">
+													</td>
+													<td>
+														<input type="text" class="form-control form-control-sm" id="compDbeRecibo-1" placeholder="">
+													</td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td>
+														<div class="custom-control custom-checkbox">
+															<input type="checkbox" class="custom-control-input" id="customCheck4">
+															<label class="custom-control-label" for="customCheck4">&nbsp;</label>
+														</div>
+													</td>
+													<td>
+														<input type="text" class="form-control form-control-sm" id="compDbeRecibo-1" placeholder="">
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>		
+								</div>		
+							</fieldset>
+							<div class="form-row">
+								<div class="form-group col-lg-6 col-md-12">
+									<fieldset>
+										<legend>Boleto</legend>
+										<div class="form-row">
+											<div class="form-group col-lg-4 col-md-6 col-sm-12">
+												<label for="compNumeroDoBoleto">Número do Boleto</label>
+												<input type="text" class="form-control" id="compNumeroDoBoleto" placeholder="">
+											</div>
+											<div class="form-group col-lg-4 col-md-6 col-sm-12">
+												<label for="compValorBoleto">Valor do Boleto</label>
+												<input type="text" class="form-control" id="compValorDarf" placeholder="">
+											</div>
+											<div class="form-group col">
+												<button type="button" class="btn btn-primary fix-align">Adicionar</button>
+											</div>
+										</div>	
+										<!--[Tabela] -->
+										<div class="form-row">
+											<div class="form-group col">
+												<div class="table-responsive">
+													<table class="table table-hover">
+														<thead class="thead-dark">
+															<tr>
+																<th scope="col">Numero do Boleto</th>
+																<th scope="col">UF</th>
+																<th scope="col">Valor do Boleto</th>
+																<th class="ats-col-icons">Ação</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<th scope="row"></th>
+																<td></td>
+																<td></td>
+																<td>
+																	<a href="#" class="ats-i-act">
+																		<i class="icon-ats-lupa "></i>
+																	</a>
+																	<a href="#" class="ats-i-act">
+																		<i class="icon-ats-editar"></i>
+																	</a>
+																	<a href="#" class="ats-i-act">
+																		<i class="icon-ats-trash"></i>
+																	</a>							
+																</td>
+															</tr>
+															<tr>
+																<th scope="row"></th>
+																<td></td>
+																<td></td>
+																<td>
+																	<a href="#" class="ats-i-act">
+																		<i class="icon-ats-lupa "></i>
+																	</a>
+																	<a href="#" class="ats-i-act">
+																		<i class="icon-ats-editar"></i>
+																	</a>
+																	<a href="#" class="ats-i-act">
+																		<i class="icon-ats-trash"></i>
+																	</a>							
+																</td>
+															</tr>
+															<tr>
+																<th scope="row"></th>
+																<td></td>
+																<td></td>
+																<td>
+																	<a href="#" class="ats-i-act">
+																		<i class="icon-ats-lupa "></i>
+																	</a>
+																	<a href="#" class="ats-i-act">
+																		<i class="icon-ats-editar"></i>
+																	</a>
+																	<a href="#" class="ats-i-act">
+																		<i class="icon-ats-trash"></i>
+																	</a>	
+																</td>
+															</tr>
+														</tbody>
+													</table>		
+												</div>
+											</div>
+										</div>
+									</fieldset>
+								</div>
+								<div class="form-group col-lg-6 col-md-12 ">
+									<fieldset>
+										<legend>Darf</legend>
+										<div class="form-row">
+											<div class="form-group col-lg-4 col-md-6 col-sm-12">
+												<label for="compNumeroDarf">Número do Darf</label>
+												<input type="text" class="form-control" id="compNumeroDoBoleto" placeholder="">
+											</div>
+											<div class="form-group col-lg-4 col-md-6 col-sm-12">
+												<label for="compValorDarf">Valor do Darf</label>
+												<input type="text" class="form-control" id="compValorDarf" placeholder="">
+											</div>
+											<div class="form-group col">
+												<button type="button" class="btn btn-primary fix-align">Adicionar</button>
+											</div>
+										</div>	
+										<!--[Tabela] -->
+										<div class="form-row">
+											<div class="form-group col">
+												<div class="table-responsive">
+													<table class="table table-hover">
+														<thead class="thead-dark">
+															<tr>
+																<th scope="col">Numero do DARF</th>
+																<th scope="col">UF</th>
+																<th scope="col">Valor do DARF</th>
+																<th class="ats-col-icons">Ação</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<th scope="row"></th>
+																<td></td>
+																<td></td>
+																<td>
+																	<a href="#" class="ats-i-act">
+																		<i class="icon-ats-lupa "></i>
+																	</a>
+																	<a href="#" class="ats-i-act">
+																		<i class="icon-ats-editar"></i>
+																	</a>
+																	<a href="#" class="ats-i-act">
+																		<i class="icon-ats-trash"></i>
+																	</a>							
+																</td>
+															</tr>
+															<tr>
+																<th scope="row"></th>
+																<td></td>
+																<td></td>
+																<td>
+																	<a href="#" class="ats-i-act">
+																		<i class="icon-ats-lupa "></i>
+																	</a>
+																	<a href="#" class="ats-i-act">
+																		<i class="icon-ats-editar"></i>
+																	</a>
+																	<a href="#" class="ats-i-act">
+																		<i class="icon-ats-trash"></i>
+																	</a>							
+																</td>
+															</tr>
+															<tr>
+																<th scope="row"></th>
+																<td></td>
+																<td></td>
+																<td>
+																	<a href="#" class="ats-i-act">
+																		<i class="icon-ats-lupa "></i>
+																	</a>
+																	<a href="#" class="ats-i-act">
+																		<i class="icon-ats-editar"></i>
+																	</a>
+																	<a href="#" class="ats-i-act">
+																		<i class="icon-ats-trash"></i>
+																	</a>							
+																</td>
+															</tr>
+														</tbody>
+													</table>		
+												</div>
+											</div>
+										</div>	
+									</fieldset>	
+								</div>	
+							</div>
+							<fieldset>
+								<legend>Anexos</legend>
+								<div class="form-row">
+									<div class="form-group col-lg-5 col-md-6">
+										<div class="custom-file">
+										 	<input type="file" class="custom-file-input" id="enviarAnexo">
+										 	<label class="custom-file-label" for="enviarAnexo">Enviar Anexo</label>
+										</div>
+									</div>
+									<div class="form-group col-lg-5 col-md-6">
+										<input type="text" class="form-control" id="enviarDescricaoDoAnexo" placeholder="Descrição do Anexo">
+									</div>
+									<div class="form-group col-lg-2">
+										<button type="submit" class="btn btn-primary">Adicionar</button>
+									</div>
+								</div>
+								<!--[Tabela] -->
+								<div class="form-row">
+									<div class="form-group col">
+										<div class="table-responsive">
+											<table class="table table-hover">
+												<thead class="thead-dark">
+													<tr>
+														<th scope="col">Anexo</th>
+														<th scope="col">UF</th>
+														<th scope="col">Remetente</th>
+														<th scope="col">Descrição do Anexo</th>
+														<th class="ats-col-icons">Ação</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<th scope="row"></th>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-lupa "></i>
+															</a>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-editar"></i>
+															</a>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-trash"></i>
+															</a>							
+														</td>
+													</tr>
+													<tr>
+														<th scope="row"></th>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-lupa "></i>
+															</a>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-editar"></i>
+															</a>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-trash"></i>
+															</a>							
+														</td>
+													</tr>
+													<tr>
+														<th scope="row"></th>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-lupa "></i>
+															</a>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-editar"></i>
+															</a>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-trash"></i>
+															</a>							
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>			
+									</div>
+								</div>
+							</fieldset>	
+								<div class="form-group">
+									<button type="Submit" class="btn btn-lg btn-primary">Salvar</button>
+									<button type="Submit" class="btn btn-lg btn-secondary">Salvar e Enviar</button>
+								</div>
+							</div>
+						</form>
+					</section>
+				</main>
+			</div>
+		</div>
+		<!--[Modal: Alterar Senha]-->
+		<div class="modal fade" id="modalAlterarSenha" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Alterar Senha</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body ats-modal">
+						<!-- Conteúdo do Corpo do Modal -->
+						<form>
+							<div class="form-row">
+								<div class="form-group col col-sm-12">
+									<label for="loginAltEmailCPF">Alterar Email ou CPF</label>
+									<input type="email" class="form-control" id="loginAltEmailCPF" placeholder="">
+								</div>
+								<div class="form-group col col-sm-12">
+									<label for="loginAltSenahAtual">Senha Atual</label>
+									<input type="text" class="form-control" id="loginAltSenahAtual" placeholder="" required="">
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group col col-sm-12">
+									<label for="loginAltNovaSenha">Nova Senha</label>
+									<input type="text" class="form-control" id="loginAltNovaSenha" placeholder="" required>
+								</div>
+								<div class="form-group col col-sm-12">
+									<label for="loginAltConfirmarSenha">Confirmar Nova Senha</label>
+									<input type="text" class="form-control" id="loginAltConfirmarSenha" placeholder="" required>
+								</div>
+							</div>		
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+								<button type="submit" class="btn btn-primary">Confirmar</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>		

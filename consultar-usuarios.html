@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+	    <meta name="author" content="">
+	    <link rel="icon" href="">
+		<title>Integração</title>
+		<!-- CSS Bootstrap -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<!-- CSS Custom -->
+		<link rel="stylesheet" type="text/css" href="css/custom.css">
+		<!-- JS Bootstrap -->
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="js/popper.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<!-- [Icons] IcoMoon-->
+		<link rel="stylesheet" type="text/css" href="css/icomoon/style.css">
+	</head>
+	<body class="ats-bg-cinza">
+		<div class="container-fluid">
+			<div class="row">
+				<aside class="col-lg-2 col-md-3 ats-sidebar">
+					<nav>
+						<a href="painel.html">
+							<div class="ats-logo">
+								<!-- <i class="icon-ats-logo-juntas"></i> -->
+								<img src="img/ats-logo-juntas.svg">
+							</div>
+						</a>
+						<ul>
+							<li class="fix-borderbottom">
+								<a href="#" class="ats-icoUser" data-toggle="collapse" data-target="#li-item1" aria-expanded="false" aria-controls="collapseExample">
+								<i class="icon-ats-user"></i>Usuário</a>
+								<li>
+									<div class="collapse ats-sublist" id="li-item1">
+										<a href="alterar-dados-cadastrais.html"><i class="icon-ats-userAlterarDatos"></i>Alterar Dados Cadastrais</a>
+										<a href="#" data-toggle="modal" data-target="#modalAlterarSenha"><i class="icon-ats-userAlterarSenha "></i>Alterar Senha</a>
+									</div>
+								</li>	
+							</li>
+							<li>
+								<a href="index.html"><i class="icon-ats-sair"></i>Sair</a>
+							</li>
+						</ul>
+					</nav>	
+				</aside>
+				<section class="ats-topbar">
+					<nav class="navbar navbar-expand-lg navbar-light">
+						<a class="navbar-brand" href="painel.html">
+							<img src="img/ats-logotipo.svg" width="190" height="auto" alt="Logotipo" title="Logo Juntas Comerciais Integração">
+						</a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav mr-auto">
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								  Usuário
+									</a>
+									<div class="dropdown-menu ats-topbar-dropdown" aria-labelledby="navbarDropdown">
+								  		<a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalAlterarSenha">Alterar Senha</a>
+									</div>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="index.html">Sair</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</section>
+				<main class="col-lg-10 col-md-9 ml-sm-auto ">
+					<section class="container ats-painel">
+						<nav aria-label="breadcrumb">
+							<a href="javascript:window.history.go(-1)" class="ats-bread"><i class="icon-arrow-left2"></i></a>
+							<ol class="breadcrumb">
+						    	<li class="breadcrumb-item"><a href="painel.html">Inicio</a></li>
+						    	<li class="breadcrumb-item">Manutenção dos Usuários</li>
+							</ol>
+						</nav>
+						<div class="row">
+							<h1>Consultar Usuários</h1>
+						</div>
+						<form>
+							<div class="form-row">
+								<div class="form-group col-lg-8 col-sm-12">
+								  <input type="text" class="form-control" id="inputEmail4" placeholder="Pesquise por um Nome, Email ou CPF...">
+								</div>
+								<div class="form-group col-auto">
+									<button class="btn btn-primary" type="submit">
+								    Pesquisar
+									</button>
+								</div>	
+								<div class="form-group col-auto">
+									<button class="btn btn-primary float-left" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+								    <i class="icon-ats-filter"></i>
+									</button>
+								</div>	
+							</div>
+							<div class="collapse" id="collapseExample">
+								<div class="form-row">
+									<h5>Filtrar</h5>
+								</div>	
+								<div class="form-row">
+									<div class="form-group col-md-3">
+										<label for="inputState">Perfil</label>
+										<select id="inputState" class="form-control">
+											<option selected>Selecionar...</option>
+											<option>Master</option>
+											<option>Master Junta</option>
+											<option>Cidadao</option>
+											<option>Outro</option>
+										</select>
+									</div>	
+									<div class="form-group col-md-3">
+										<label for="inputState">UF - Junta Comercial</label>
+										<select id="inputState" class="form-control">
+										<option selected>Selecionar...</option>
+										<option>RJ</option>
+										<option>BA</option>
+										<option>PB</option>
+										<option>SP</option>
+										</select>
+									</div>
+									<div class="form-group col-md-3">
+									<label for="inputState">Status do Usuário</label>
+										<select id="inputState" class="form-control">
+										<option selected>Selecionar...</option>
+										<option>RJ</option>
+										<option>BA</option>
+										<option>PB</option>
+										<option>SP</option>
+										</select>
+									</div>
+									<div class="form-group col-md-3 ">
+										<button type="submit" class="btn btn-primary fix-align">Refinar Pesquisa</button>
+									</div>	
+								</div>
+							</div>  
+						</form>
+						<!-- Item Lista Ativo -->
+						<div class="row align-items-center ats-lista">
+							<div class="col-8 col-md-9">
+								<div class="row">
+									<span class="badge badge-pill ats-badge-usuario">Master</span>
+									<span class="ats-l-nome">João Pedro Neto</span>
+									<span class="badge badge-pill ats-badge-uf">RJ</span>
+								</div>
+								<div class="row">
+									<span class="ats-l-email">tiojoao@email.com.br</span>
+								</div>
+								<div class="row">
+									<span class="ats-l-cpf">12627753703</span>
+								</div>
+							</div>
+							<div class="col-2 col-md-2">
+								<div class="ats-badge-align">
+									<span class="badge badge-pill ats-badge-ativo float-right">Ativo</span>
+								</div>	
+							</div>
+							<div class="col-2 col-md-1">
+								<div class="dropdown float-right">
+									<span class="dropdown-toggle ats-bullets" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									</button>
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+										<a class="dropdown-item" href="#">
+											<i class="icon-ats-lupa"></i>Visualizar
+										</a>
+										<a class="dropdown-item" href="#">
+											<i class="icon-ats-editar"></i>Editar
+										</a>
+										<a class="dropdown-item" href="#">
+											<i class="icon-ats-trash"></i>Excluir
+										</a>
+									</div>
+								</div>			
+							</div>	
+						</div>
+						<!-- Item Lista Ativo -->
+						<div class="row align-items-center ats-lista">
+							<div class="col-8 col-md-9">
+								<div class="row">
+									<span class="badge badge-pill ats-badge-usuario">Master</span>
+									<span class="ats-l-nome">João Pedro Neto</span>
+									<span class="badge badge-pill ats-badge-uf">RJ</span>
+								</div>
+								<div class="row">
+									<span class="ats-l-email">tiojoao@email.com.br</span>
+								</div>
+								<div class="row">
+									<span class="ats-l-cpf">12627753703</span>
+								</div>
+							</div>
+							<div class="col-2 col-md-2">
+								<div class="ats-badge-align">
+									<span class="badge badge-pill ats-badge-bloqueado float-right">Bloqueado</span>
+								</div>	
+							</div>
+							<div class="col-2 col-md-1">
+								<div class="dropdown float-right">
+									<span class="dropdown-toggle ats-bullets" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									</button>
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+										<a class="dropdown-item" href="#">
+											<i class="icon-ats-lupa"></i>Visualizar
+										</a>
+										<a class="dropdown-item" href="#">
+											<i class="icon-ats-editar"></i>Editar
+										</a>
+										<a class="dropdown-item" href="#">
+											<i class="icon-ats-trash"></i>Excluir
+										</a>
+									</div>
+								</div>			
+							</div>	
+						</div>
+						<!-- Item Lista Ativo -->
+						<div class="row align-items-center ats-lista">
+							<div class="col-8 col-md-9">
+								<div class="row">
+									<span class="badge badge-pill ats-badge-usuario">Master</span>
+									<span class="ats-l-nome">João Pedro Neto</span>
+									<span class="badge badge-pill ats-badge-uf">RJ</span>
+								</div>
+								<div class="row">
+									<span class="ats-l-email">tiojoao@email.com.br</span>
+								</div>
+								<div class="row">
+									<span class="ats-l-cpf">12627753703</span>
+								</div>
+							</div>
+							<div class="col-2 col-md-2">
+								<div class="ats-badge-align">
+									<span class="badge badge-pill ats-badge-excluido float-right">Excluído</span>
+								</div>	
+							</div>
+							<div class="col-2 col-md-1">
+								<div class="dropdown float-right">
+									<span class="dropdown-toggle ats-bullets" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									</button>
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+										<a class="dropdown-item" href="#">
+											<i class="icon-ats-lupa"></i>Visualizar
+										</a>
+										<a class="dropdown-item" href="#">
+											<i class="icon-ats-editar"></i>Editar
+										</a>
+										<a class="dropdown-item" href="#">
+											<i class="icon-ats-trash"></i>Excluir
+										</a>
+									</div>
+								</div>			
+							</div>	
+						</div>
+						<!-- Item Lista Ativo -->
+						<div class="row align-items-center ats-lista">
+							<div class="col-8 col-md-9">
+								<div class="row">
+									<span class="badge badge-pill ats-badge-usuario">Master</span>
+									<span class="ats-l-nome">João Pedro Neto</span>
+									<span class="badge badge-pill ats-badge-uf">RJ</span>
+								</div>
+								<div class="row">
+									<span class="ats-l-email">tiojoao@email.com.br</span>
+								</div>
+								<div class="row">
+									<span class="ats-l-cpf">12627753703</span>
+								</div>
+							</div>
+							<div class="col-2 col-md-2">
+								<div class="ats-badge-align">
+									<span class="badge badge-pill ats-badge-ativo float-right">Ativo</span>
+								</div>	
+							</div>
+							<div class="col-2 col-md-1">
+								<div class="dropdown float-right">
+									<span class="dropdown-toggle ats-bullets" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									</button>
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+										<a class="dropdown-item" href="#">
+											<i class="icon-ats-lupa"></i>Visualizar
+										</a>
+										<a class="dropdown-item" href="#">
+											<i class="icon-ats-editar"></i>Editar
+										</a>
+										<a class="dropdown-item" href="#">
+											<i class="icon-ats-trash"></i>Excluir
+										</a>
+									</div>
+								</div>			
+							</div>	
+						</div>
+						<!-- Item Lista Ativo -->
+						<div class="row align-items-center ats-lista">
+							<div class="col-8 col-md-9">
+								<div class="row">
+									<span class="badge badge-pill ats-badge-usuario">Master</span>
+									<span class="ats-l-nome">João Pedro Neto</span>
+									<span class="badge badge-pill ats-badge-uf">RJ</span>
+								</div>
+								<div class="row">
+									<span class="ats-l-email">tiojoao@email.com.br</span>
+								</div>
+								<div class="row">
+									<span class="ats-l-cpf">12627753703</span>
+								</div>
+							</div>
+							<div class="col-2 col-md-2">
+								<div class="ats-badge-align">
+									<span class="badge badge-pill ats-badge-ativo float-right">Ativo</span>
+								</div>	
+							</div>
+							<div class="col-2 col-md-1">
+								<div class="dropdown float-right">
+									<span class="dropdown-toggle ats-bullets" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									</button>
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+										<a class="dropdown-item" href="#">
+											<i class="icon-ats-lupa"></i>Visualizar
+										</a>
+										<a class="dropdown-item" href="#">
+											<i class="icon-ats-editar"></i>Editar
+										</a>
+										<a class="dropdown-item" href="#">
+											<i class="icon-ats-trash"></i>Excluir
+										</a>
+									</div>
+								</div>			
+							</div>	
+						</div>
+						<!-- Item Lista Ativo -->
+						<div class="row align-items-center ats-lista">
+							<div class="col-8 col-md-9">
+								<div class="row">
+									<span class="badge badge-pill ats-badge-usuario">Master</span>
+									<span class="ats-l-nome">João Pedro Neto</span>
+									<span class="badge badge-pill ats-badge-uf">RJ</span>
+								</div>
+								<div class="row">
+									<span class="ats-l-email">tiojoao@email.com.br</span>
+								</div>
+								<div class="row">
+									<span class="ats-l-cpf">12627753703</span>
+								</div>
+							</div>
+							<div class="col-2 col-md-2">
+								<div class="ats-badge-align">
+									<span class="badge badge-pill ats-badge-ativo float-right">Ativo</span>
+								</div>	
+							</div>
+							<div class="col-2 col-md-1">
+								<div class="dropdown float-right">
+									<span class="dropdown-toggle ats-bullets" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									</button>
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+										<a class="dropdown-item" href="#">
+											<i class="icon-ats-lupa"></i>Visualizar
+										</a>
+										<a class="dropdown-item" href="#">
+											<i class="icon-ats-editar"></i>Editar
+										</a>
+										<a class="dropdown-item" href="#">
+											<i class="icon-ats-trash"></i>Excluir
+										</a>
+									</div>
+								</div>			
+							</div>	
+						</div>
+						<!-- Item Lista Ativo -->
+						<div class="row align-items-center ats-lista">
+							<div class="col-8 col-md-9">
+								<div class="row">
+									<span class="badge badge-pill ats-badge-usuario">Master</span>
+									<span class="ats-l-nome">João Pedro Neto</span>
+									<span class="badge badge-pill ats-badge-uf">RJ</span>
+								</div>
+								<div class="row">
+									<span class="ats-l-email">tiojoao@email.com.br</span>
+								</div>
+								<div class="row">
+									<span class="ats-l-cpf">12627753703</span>
+								</div>
+							</div>
+							<div class="col-2 col-md-2">
+								<div class="ats-badge-align">
+									<span class="badge badge-pill ats-badge-ativo float-right">Ativo</span>
+								</div>	
+							</div>
+							<div class="col-2 col-md-1">
+								<div class="dropdown float-right">
+									<span class="dropdown-toggle ats-bullets" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									</button>
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+										<a class="dropdown-item" href="#">
+											<i class="icon-ats-lupa"></i>Visualizar
+										</a>
+										<a class="dropdown-item" href="#">
+											<i class="icon-ats-editar"></i>Editar
+										</a>
+										<a class="dropdown-item" href="#">
+											<i class="icon-ats-trash"></i>Excluir
+										</a>
+									</div>
+								</div>			
+							</div>	
+						</div>
+						<!-- [Paginação] -->
+						<nav aria-label="Page navigation example">
+							<ul class="pagination pagination-lg justify-content-center">
+								<li class="page-item disabled">
+									<a class="page-link" href="#" tabindex="-1">Anterior</a>
+								</li>
+								<li class="page-item">
+									<a class="page-link" href="#">1</a></li>
+								<li class="page-item"><a class="page-link" href="#">2</a>
+								</li>
+								<li class="page-item">
+									<a class="page-link" href="#">3</a>
+								</li>
+								<li class="page-item">
+									<a class="page-link" href="#">Próximo</a>
+								</li>
+							</ul>
+						</nav>	
+					</section>
+				</main>
+			</div>
+		</div>
+		<!--[Modal: Alterar Senha]-->
+		<div class="modal fade" id="modalAlterarSenha" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Alterar Senha</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body ats-modal">
+						<!-- Conteúdo do Corpo do Modal -->
+						<form>
+							<div class="form-row">
+								<div class="form-group col col-sm-12">
+									<label for="loginAltEmailCPF">Alterar Email ou CPF</label>
+									<input type="email" class="form-control" id="loginAltEmailCPF" placeholder="">
+								</div>
+								<div class="form-group col col-sm-12">
+									<label for="loginAltSenahAtual">Senha Atual</label>
+									<input type="text" class="form-control" id="loginAltSenahAtual" placeholder="" required="">
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group col col-sm-12">
+									<label for="loginAltNovaSenha">Nova Senha</label>
+									<input type="text" class="form-control" id="loginAltNovaSenha" placeholder="" required>
+								</div>
+								<div class="form-group col col-sm-12">
+									<label for="loginAltConfirmarSenha">Confirmar Nova Senha</label>
+									<input type="text" class="form-control" id="loginAltConfirmarSenha" placeholder="" required>
+								</div>
+							</div>		
+							<div class="modal-footer">
+								<button type="button" class="btn btn-dark" data-dismiss="modal">Cancelar</button>
+								<button type="submit" class="btn btn-primary">Confirmar</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

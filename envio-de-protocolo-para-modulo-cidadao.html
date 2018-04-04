@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+	    <meta name="author" content="">
+	    <link rel="icon" href="">
+		<title>Enviar Protocolo para o Módulo Cidadão</title>
+		<!-- CSS Bootstrap -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<!-- CSS Custom -->
+		<link rel="stylesheet" type="text/css" href="css/custom.css">
+		<!-- JS Bootstrap -->
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="js/popper.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<!-- [Icons] IcoMoon-->
+		<link rel="stylesheet" type="text/css" href="css/icomoon/style.css">
+	</head>
+	<body class="ats-bg-cinza">
+		<div class="container-fluid">
+			<div class="row">
+				<aside class="col-lg-2 col-md-3 ats-sidebar">
+					<nav>
+						<a href="painel.html">
+							<div class="ats-logo">
+								<!-- <i class="icon-ats-logo-juntas"></i> -->
+								<img src="img/ats-logo-juntas.svg">
+							</div>
+						</a>
+						<ul>
+							<li class="fix-borderbottom">
+								<a href="#" class="ats-icoUser" data-toggle="collapse" data-target="#li-item1" aria-expanded="false" aria-controls="collapseExample">
+								<i class="icon-ats-user"></i>Usuário</a>
+								<li>
+									<div class="collapse ats-sublist" id="li-item1">
+										<a href="alterar-dados-cadastrais.html"><i class="icon-ats-userAlterarDatos"></i>Alterar Dados Cadastrais</a>
+										<a href="#" data-toggle="modal" data-target="#modalAlterarSenha"><i class="icon-ats-userAlterarSenha "></i>Alterar Senha</a>
+									</div>
+								</li>	
+							</li>
+							<li>
+								<a href="index.html"><i class="icon-ats-sair"></i>Sair</a>
+							</li>
+						</ul>
+					</nav>	
+				</aside>
+				<section class="ats-topbar">
+					<nav class="navbar navbar-expand-lg navbar-light">
+						<a class="navbar-brand" href="painel.html">
+							<img src="img/ats-logotipo.svg" width="190" height="auto" alt="Logotipo" title="Logo Juntas Comerciais Integração">
+						</a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav mr-auto">
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								  Usuário
+									</a>
+									<div class="dropdown-menu ats-topbar-dropdown" aria-labelledby="navbarDropdown">
+								  		<a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalAlterarSenha">Alterar Senha</a>
+									</div>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="index.html">Sair</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</section>
+				<main class="col-lg-10 col-md-9 ml-sm-auto ">
+					<section class="container ats-painel">
+						<nav aria-label="breadcrumb">
+							<a href="javascript:window.history.go(-1)" class="ats-bread"><i class="icon-arrow-left2"></i></a>
+							<ol class="breadcrumb">
+						    	<li class="breadcrumb-item"><a href="painel.html">Inicio</a></li>
+						    	<li class="breadcrumb-item">Enviar Protocolos</li>
+							</ol>
+						</nav>
+						<div class="row">
+							<h1>Enviar Protocolo para o Módulo Cidadão</h1>
+						</div>
+						<form>
+							<div class="form-row">
+								<div class="form-group col-lg-3 col-md-6">
+									<label for="e">Nº do Pedido</label>
+									<input type="text" class="form-control" id="inputName1" placeholder="" disabled>
+								</div>
+								<div class="form-group col-lg-3 col-md-6">
+									<label for="enviarNProtocolo">Nº do Protocolo*</label>
+									<input type="text" class="form-control" id="enviarNProtocolo" placeholder="" required>
+								</div>
+								<div class="form-group col-lg-3 col-md-6">
+									<label for="enviarDataDeEntrada">Data de Entrada</label>
+									<input type="text" class="form-control" id="enviarDataDeEntrada" placeholder="">
+								</div>
+								<div class="form-group col-lg-3 col-md-6">
+									<label for="enviarNDoArquivamento">Nº do Arquivamento</label>
+									<input type="text" class="form-control" id="enviarNDoArquivamento" placeholder="" required>
+								</div>
+								<div class="form-group col-lg-4 col-md-6">
+									<label for="enviarDataDoArquivamento">Data do Arquivamento*</label>
+									<input type="text" class="form-control" id="enviarDataDoArquivamento" placeholder="" required>
+								</div>
+								<div class="form-group col-lg-4 col-md-6">
+									<label for="enviarNireDaSede">NIRE da Sede*</label>
+									<input type="text" class="form-control" id="enviarNireDaSede" placeholder="" required>
+								</div>
+								<div class="form-group col-lg-4 col-md-6">
+									<label for="enviarCnpjDaSede">CNPJ da Sede*</label>
+									<input type="text" class="form-control" id="enviarCnpjDaSede" placeholder="" required>
+								</div>
+								<div class="form-group col-lg-12">
+									<label for="enviarNomeEmpresarial">Nome Empresarial*</label>
+									<input type="text" class="form-control" id="enviarNomeEmpresarial" placeholder="" required>
+								</div>
+							</div>
+							<fieldset>
+								<legend>Identificação do Cidadão</legend>
+								<div class="form-row">
+									<div class="form-group col">
+										<label for="enviarHashDoProtcolo">Hash do Protcolo*</label>
+										<input type="text" class="form-control" id="enviarHashDoProtcolo" placeholder="" required>
+									</div>
+									<div class="form-group col">
+										<label for="enviarEmail">Email*</label>
+										<input type="email" class="form-control" id="enviarEmail" placeholder="" required>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-group col">
+										<label for="enviarCPF">CPF*</label>
+										<input type="value" class="form-control" id="enviarCPF" placeholder="" required>
+									</div>
+									<div class="form-group col">
+										<label for="enviarNome">Nome</label>
+										<input type="text" class="form-control" id="enviarNome" placeholder="">
+									</div>
+								</div>
+							</fieldset>
+							<fieldset>
+								<legend>Destino</legend>
+								<div class="form-row">
+									<div class="form-group col-lg-5 col-md-6">
+									    <label for="enviarJuntasDisponiveis">Juntas Comerciais Disponiveis:</label>
+									    <select class="form-control" id="enviarJuntasDisponiveis">
+											<option>AC - Acre</option>
+											<option>AL - Alagoas</option>
+											<option>AM - Amazonas</option>
+											<option>BA - Bahia</option>
+											<option>CE Ceará</option>
+									    </select> 
+									</div>
+									<div class="form-group col-lg-5 col-md-6">
+										<label for="enviarQntDeFiliais">Nº filias a serem abertas:</label>   
+										<select class="custom-select" id="enviarQntDeFiliais">
+											<option selected>0</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">4</option>
+										</select>
+									</div>
+									<div class="form-group col">
+										<button type="" class="btn btn-primary fix-align">Adicionar</button>
+									</div>
+								</div>
+								<div class="form-row">
+									<!-- [Tabela] -->
+									<div class="form-group col">
+										<div class="table-responsive">
+											<table class="table table-hover">
+												<thead class="thead-dark">
+													<tr>
+														<th scope="col">Estado</th>
+														<th scope="col">Abertas</th>
+														<th scope="col">Alteradas</th>
+														<th scope="col">Encerradas</th>
+														<th class="ats-col-icons">Ação</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<th scope="row"></th>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-lupa "></i>
+															</a>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-editar"></i>
+															</a>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-trash"></i>
+															</a>	
+														</td>
+													</tr>
+													<tr>
+														<th scope="row"></th>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-lupa "></i>
+															</a>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-editar"></i>
+															</a>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-trash"></i>
+															</a>	
+														</td>
+													</tr>
+													<tr>
+														<th scope="row"></th>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-lupa "></i>
+															</a>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-editar"></i>
+															</a>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-trash"></i>
+															</a>	
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>			
+									</div>	
+								</div>	
+							</fieldset> 
+							<fieldset>
+								<legend>Anexos</legend>
+								<div class="form-row">
+									<div class="form-group col-lg-5 col-md-6">
+										<div class="custom-file">
+										 	<input type="file" class="custom-file-input" id="enviarAnexo">
+										 	<label class="custom-file-label" for="enviarAnexo">Enviar Anexo</label>
+										</div>
+									</div>
+									<div class="form-group col-lg-5 col-md-6">
+										<input type="text" class="form-control" id="enviarDescricaoDoAnexo" placeholder="Descrição do Anexo">
+									</div>
+									<div class="form-group col-lg-2">
+										<button type="submit" class="btn btn-primary">Adicionar</button>
+									</div>
+								</div>
+								<!--[Tabela] -->
+								<div class="form-row">
+									<div class="form-group col">
+										<div class="table-responsive no-scroll">
+											<table class="table table-hover">
+												<thead class="thead-dark">
+													<tr>
+														<th scope="col">Anexo</th>
+														<th scope="col">Descrição do Anexo</th>
+														<th class="ats-col-icons">Ação</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<th scope="row"></th>
+														<td></td>
+														<td>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-lupa "></i>
+															</a>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-editar"></i>
+															</a>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-trash"></i>
+															</a>	
+														</td>
+													</tr>
+													<tr>
+														<th scope="row"></th>
+														<td></td>
+														<td>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-lupa "></i>
+															</a>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-editar"></i>
+															</a>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-trash"></i>
+															</a>	
+														</td>
+													</tr>
+													<tr>
+														<th scope="row"></th>
+														<td></td>
+														<td>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-lupa "></i>
+															</a>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-editar"></i>
+															</a>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-trash"></i>
+															</a>	
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>			
+									</div>
+								</div>
+							</fieldset>	
+							<div class="form-row">
+								<div class="form-group">
+									<button type="Submit" class="btn btn-lg btn-primary">XML</button>
+									<button type="Submit" class="btn btn-lg btn-secondary">Salvar</button>
+								</div>
+							</div>
+						</form>
+					</section>
+				</main>
+			</div>
+		</div>
+		<!--[Modal: Alterar Senha]-->
+		<div class="modal fade" id="modalAlterarSenha" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Alterar Senha</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body ats-modal">
+						<!-- Conteúdo do Corpo do Modal -->
+						<form>
+							<div class="form-row">
+								<div class="form-group col col-sm-12">
+									<label for="loginAltEmailCPF">Alterar Email ou CPF</label>
+									<input type="email" class="form-control" id="loginAltEmailCPF" placeholder="">
+								</div>
+								<div class="form-group col col-sm-12">
+									<label for="loginAltSenahAtual">Senha Atual</label>
+									<input type="text" class="form-control" id="loginAltSenahAtual" placeholder="" required="">
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group col col-sm-12">
+									<label for="loginAltNovaSenha">Nova Senha</label>
+									<input type="text" class="form-control" id="loginAltNovaSenha" placeholder="" required>
+								</div>
+								<div class="form-group col col-sm-12">
+									<label for="loginAltConfirmarSenha">Confirmar Nova Senha</label>
+									<input type="text" class="form-control" id="loginAltConfirmarSenha" placeholder="" required>
+								</div>
+							</div>		
+							<div class="modal-footer">
+								<button type="button" class="btn btn-dark" data-dismiss="modal">Cancelar</button>
+								<button type="submit" class="btn btn-primary">Confirmar</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>		
