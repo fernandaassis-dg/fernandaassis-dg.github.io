@@ -35,13 +35,13 @@ body {
 
 /* Barra Lateral */
 
-aside a:hover
+aside a:hover {
 	text-decoration: none;
 }
 
 /* Uitlitários de correção */
 .fix-align {
-	margin-top: 31px;
+	margin-top: 31px!important;
 }
 
 .fix-borderTop {
@@ -212,7 +212,7 @@ input, select, textarea {
 /* [Icons da Tabelas, coluna de ações] */
 
 th.ats-col-icons {
-	display: block;
+	display: table-cell;
 	width: 115px;
 }
 
@@ -469,7 +469,7 @@ th.ats-col-icons {
 	}
 
 	_:-ms-fullscreen, :root .ats.login-footer { 
-		position:none;
+		position:none!important;
 	}
 
 /* [BreadCrumb - Protocolo Web] */

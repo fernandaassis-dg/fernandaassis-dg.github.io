@@ -147,143 +147,86 @@
 							<fieldset>
 								<legend>Destino</legend>
 								<div class="form-row">
-									<div class="form-group col-lg-12">
+									<div class="form-group col-lg-5 col-md-6">
 									    <label for="enviarJuntasDisponiveis">Juntas Comerciais Disponiveis:</label>
 									    <select class="custom-select" id="enviarJuntasDisponiveis">
-											<option>AC - Acre</option>
-											<option>AL - Alagoas</option>
-											<option>AM - Amazonas</option>
-											<option>BA - Bahia</option>
-											<option>CE - Ceará</option>
+											
 									    </select> 
 									</div>
-								</div>	
-								<div class="form-row align-items-center">
-									<!-- [Title] -->
-									<div class="col-12">
-										<h3>Quantidade de filiais a serem:</h3>
+									<div class="form-group col-lg-5 col-md-6">
+										<label for="enviarQntDeFiliais">Nº filias a serem abertas:</label>   
+										<select class="custom-select" id="enviarQntDeFiliais">
+											<option selected>1</option>
+											<option value="1">2</option>
+											<option value="2">3</option>
+										</select>
 									</div>
-									<!-- [Controles] -->
-									<div class="col-lg-4 col-md-12">
-										<div class="form-row align-items-center">
-											<!-- [Coluna 1] -->
-											<div class="col-10">
-												<!-- [Combo 1] -->
-												<div class="form-row">
-													<div class="form-group col">
-														<label for="enviarQntDeFiliais">Abertas:</label>
-														<select class="custom-select" id="enviarQntDeFiliais">
-															<option selected>0</option>
-															<option value="1">1</option>
-															<option value="2">2</option>
-															<option value="3">4</option>
-														</select>
-													</div>
-												</div>
-												<!-- [Combo 2] -->
-												<div class="form-row">
-													<div class="form-group col">
-														<label for="enviarQntDeFiliais">Alteradas:</label>
-														<select class="custom-select" id="enviarQntDeFiliais">
-															<option selected>0</option>
-															<option value="1">1</option>
-															<option value="2">2</option>
-															<option value="3">4</option>
-														</select>
-													</div>
-												</div>
-												<!-- [Combo 3] -->
-												<div class="form-row">
-													<div class="form-group col">
-														<label for="enviarQntDeFiliais">Encerradas:</label>
-														<select class="custom-select" id="enviarQntDeFiliais">
-															<option selected>0</option>
-															<option value="1">1</option>
-															<option value="2">2</option>
-															<option value="3">4</option>
-														</select>
-													</div>
-												</div>
-											</div>
-											<!-- [Coluna 2 -->
-											<div class="col-2 no-gutters">
-												<!-- [Button 1] -->
-												<div class="form-group col">
-													<button type="" class="btn btn-primary btn-sm btn-block"><</button>
-												</div>
-												<!-- [Button 1] -->
-												<div class="form-group col">
-													<button type="" class="btn btn-primary btn-sm btn-block">></button>
-												</div>
-											</div>	
-										</div>	
-									</div>	
+									<div class="form-group col">
+										<button type="" class="btn btn-primary fix-align">Adicionar</button>
+									</div>
+								</div>
+								<div class="form-row">
 									<!-- [Tabela] -->
-									<div class="col-lg-8 col-md-12">
-										<div class="form-row">
-											<div class="form-group col">
-												<div class="table-responsive">
-													<table class="table table-hover">
-														<thead class="thead-dark">
-															<tr>
-																<th scope="col">Estado</th>
-																<th scope="col">Abertas</th>
-																<th scope="col">Alteradas</th>
-																<th scope="col">Encerradas</th>
-																<th scope="col">Ação</th>
-															</tr>
-														</thead>
-														<tbody>
-															<tr>
-																<th scope="row"></th>
-																<td></td>
-																<td></td>
-																<td></td>
-																<td>
-																	<a href="#" class="ats-i-act">
-																		<i class="icon-ats-trash"></i>
-																	</a>
-																</td>
-															</tr>
-															<tr>
-																<th scope="row"></th>
-																<td></td>
-																<td></td>
-																<td></td>
-																<td>
-																	<a href="#" class="ats-i-act">
-																		<i class="icon-ats-trash"></i>
-																	</a>
-																</td>
-															</tr>
-															<tr>
-																<th scope="row"></th>
-																<td></td>
-																<td></td>
-																<td></td>
-																<td>
-																	<a href="#" class="ats-i-act">
-																		<i class="icon-ats-trash"></i>
-																	</a>
-																</td>
-															</tr>
-															<tr>
-																<th scope="row"></th>
-																<td></td>
-																<td></td>
-																<td></td>
-																<td>
-																	<a href="#" class="ats-i-act">
-																		<i class="icon-ats-trash"></i>
-																	</a>
-																</td>
-															</tr>
-														</tbody>
-													</table>
-												</div>
-											</div>
-										</div>
-									</div>
+									<div class="form-group col">
+										<div class="table-responsive">
+											<table class="table table-hover">
+												<thead class="thead-dark">
+													<tr>
+														<th scope="col">Estado</th>
+														<th scope="col">Abertas</th>
+														<th class="col ats-col-icons">Ação</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<th scope="row"></th>
+														<td></td>
+														<td>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-lupa "></i>
+															</a>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-editar"></i>
+															</a>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-trash"></i>
+															</a>	
+														</td>
+													</tr>
+													<tr>
+														<th scope="row"></th>
+														<td></td>
+														<td>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-lupa "></i>
+															</a>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-editar"></i>
+															</a>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-trash"></i>
+															</a>	
+														</td>
+													</tr>
+													<tr>
+														<th scope="row"></th>
+														<td></td>
+														<td>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-lupa "></i>
+															</a>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-editar"></i>
+															</a>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-trash"></i>
+															</a>	
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>			
+									</div>	
 								</div>	
 							</fieldset> 
 							<fieldset>
