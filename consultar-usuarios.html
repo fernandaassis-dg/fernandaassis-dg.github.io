@@ -17,6 +17,8 @@
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<!-- [Icons] IcoMoon-->
 		<link rel="stylesheet" type="text/css" href="css/icomoon/style.css">
+		<!-- [ CSS Fix - Corrige um Bug somente nesta página] -->
+		<style>[type=reset], [type=submit], button, html [type=button] { -webkit-appearance: button; }</style> 
 	</head>
 	<body class="ats-bg-cinza">
 		<div class="container-fluid">
@@ -25,7 +27,6 @@
 					<nav>
 						<a href="painel.html">
 							<div class="ats-logo">
-								<!-- <i class="icon-ats-logo-juntas"></i> -->
 								<img src="img/ats-logo-juntas.svg">
 							</div>
 						</a>
@@ -56,6 +57,10 @@
 						</button>
 						<div class="collapse navbar-collapse" id="navbarSupportedContent">
 							<ul class="navbar-nav mr-auto">
+								<li class="nav-item">
+									<a class="nav-link" href="alterar-dados-cadastrais.html">Alterar Dados Cadastrais</a>
+								</li>
+								
 								<li class="nav-item dropdown">
 									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								  Usuário
@@ -85,6 +90,31 @@
 						</div>
 						<form>
 							<div class="form-row">
+								<div class="form-group col-lg-3 col-md-6">
+									<label for="campoConsultaUserNome">Nome</label>
+									<input type="text" class="form-control" id="campoConsultaUserNome" placeholder="">
+								</div>
+								<div class="form-group col-lg-3 col-md-6">
+									<label for="campoConsultaUserEmail">Email</label>
+									<input type="text" class="form-control" id="campoConsultaUserEmail" placeholder="">
+								</div>
+								<div class="form-group col-lg-3 col-md-6">
+									<label for="campoConsultaUserCPF">CPF</label>
+									<input type="text" class="form-control" id="campoConsultaUserCPF" placeholder="">
+								</div>
+								<div class="form-group col-auto">
+									<button class="btn btn-primary fix-align" type="submit">
+										Pesquisar
+									</button>
+								</div>
+								<div class="form-group col-auto">
+									<button class="btn btn-primary float-left fix-align" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false"
+									 aria-controls="collapseExample">
+										<i class="icon-ats-filter"></i>
+									</button>
+								</div>
+							</div>
+							<!-- <div class="form-row">
 								<div class="form-group col-lg-8 col-sm-12">
 								  <input type="text" class="form-control" id="inputEmail4" placeholder="Pesquise por um Nome, Email ou CPF...">
 								</div>
@@ -98,13 +128,13 @@
 								    <i class="icon-ats-filter"></i>
 									</button>
 								</div>	
-							</div>
+							</div>  -->
 							<div class="collapse" id="collapseExample">
 								<div class="form-row">
 									<h5>Filtrar</h5>
 								</div>	
 								<div class="form-row">
-									<div class="form-group col-md-3">
+									<div class="form-group col-md-3 ">
 										<label for="inputState">Perfil</label>
 										<select id="inputState" class="form-control">
 											<option selected>Selecionar...</option>
@@ -114,7 +144,7 @@
 											<option>Outro</option>
 										</select>
 									</div>	
-									<div class="form-group col-md-3">
+									<div class="form-group col-lg-3 col-md-4">
 										<label for="inputState">UF - Junta Comercial</label>
 										<select id="inputState" class="form-control">
 										<option selected>Selecionar...</option>
@@ -124,7 +154,7 @@
 										<option>SP</option>
 										</select>
 									</div>
-									<div class="form-group col-md-3">
+									<div class="form-group col-lg-3 col-md-4">
 									<label for="inputState">Status do Usuário</label>
 										<select id="inputState" class="form-control">
 										<option selected>Selecionar...</option>
@@ -134,36 +164,32 @@
 										<option>SP</option>
 										</select>
 									</div>
-									<div class="form-group col-md-3 ">
+									<div class="form-group col-lg-3 col-md-4">
 										<button type="submit" class="btn btn-primary fix-align">Refinar Pesquisa</button>
 									</div>	
 								</div>
 							</div>  
 						</form>
-						<!-- Item Lista Ativo -->
-						<div class="row align-items-center ats-lista">
-							<div class="col-8 col-md-9">
-								<div class="row">
-									<span class="badge badge-pill ats-badge-usuario">Master</span>
-									<span class="ats-l-nome">João Pedro Neto</span>
-									<span class="badge badge-pill ats-badge-uf">RJ</span>
-								</div>
-								<div class="row">
-									<span class="ats-l-email">tiojoao@email.com.br</span>
-								</div>
-								<div class="row">
-									<span class="ats-l-cpf">12627753703</span>
-								</div>
+						<!-- Item Ativo -->
+						<div class="row  align-items-center ats-lista">
+							<div class="col">
+								<span class="badge badge-pill ats-badge-usuario">Master</span>
+								<!-- [Nome] -->
+								<span class="ats-l-nome">João Pedro Neto</span>
+								<!-- [Local] -->
+								<span class="badge badge-pill ats-badge-uf">RJ</span>
+								<!-- [Email] -->
+								<span class="ats-l-email">tiojoao@email.com.br</span>
+								<!-- [CPF] -->
+								<span class="ats-l-cpf">12627753703</span>
 							</div>
-							<div class="col-2 col-md-2">
-								<div class="ats-badge-align">
-									<span class="badge badge-pill ats-badge-ativo float-right">Ativo</span>
-								</div>	
-							</div>
-							<div class="col-2 col-md-1">
+							<div class="col-auto">
+								<!-- [Label - Status] -->
+								<span class="badge badge-pill ats-badge-ativo">Ativo</span>
+								<!-- [Bullets - Dropdown] -->
 								<div class="dropdown float-right">
-									<span class="dropdown-toggle ats-bullets" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									</button>
+									<span class="dropdown-toggle ats-bullets" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+									 aria-expanded="false"></span>
 									<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 										<a class="dropdown-item" href="#">
 											<i class="icon-ats-lupa"></i>Visualizar
@@ -175,33 +201,29 @@
 											<i class="icon-ats-trash"></i>Excluir
 										</a>
 									</div>
-								</div>			
-							</div>	
+								</div>
+							</div>
 						</div>
-						<!-- Item Lista Ativo -->
-						<div class="row align-items-center ats-lista">
-							<div class="col-8 col-md-9">
-								<div class="row">
-									<span class="badge badge-pill ats-badge-usuario">Master</span>
-									<span class="ats-l-nome">João Pedro Neto</span>
-									<span class="badge badge-pill ats-badge-uf">RJ</span>
-								</div>
-								<div class="row">
-									<span class="ats-l-email">tiojoao@email.com.br</span>
-								</div>
-								<div class="row">
-									<span class="ats-l-cpf">12627753703</span>
-								</div>
+						<!-- Item Bloqueado -->
+						<div class="row  align-items-center ats-lista">
+							<div class="col">
+								<span class="badge badge-pill ats-badge-usuario">Master</span>
+								<!-- [Nome] -->
+								<span class="ats-l-nome">João Pedro Neto</span>
+								<!-- [Local] -->
+								<span class="badge badge-pill ats-badge-uf">RJ</span>
+								<!-- [Email] -->
+								<span class="ats-l-email">tiojoao@email.com.br</span>
+								<!-- [CPF] -->
+								<span class="ats-l-cpf">12627753703</span>
 							</div>
-							<div class="col-2 col-md-2">
-								<div class="ats-badge-align">
-									<span class="badge badge-pill ats-badge-bloqueado float-right">Bloqueado</span>
-								</div>	
-							</div>
-							<div class="col-2 col-md-1">
+							<div class="col-auto">
+								<!-- [Label - Status] -->
+								<span class="badge badge-pill ats-badge-bloqueado">bloqueado</span>
+								<!-- [Bullets - Dropdown] -->
 								<div class="dropdown float-right">
-									<span class="dropdown-toggle ats-bullets" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									</button>
+									<span class="dropdown-toggle ats-bullets" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+									 aria-expanded="false"></span>
 									<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 										<a class="dropdown-item" href="#">
 											<i class="icon-ats-lupa"></i>Visualizar
@@ -213,33 +235,29 @@
 											<i class="icon-ats-trash"></i>Excluir
 										</a>
 									</div>
-								</div>			
-							</div>	
+								</div>
+							</div>
 						</div>
-						<!-- Item Lista Ativo -->
-						<div class="row align-items-center ats-lista">
-							<div class="col-8 col-md-9">
-								<div class="row">
-									<span class="badge badge-pill ats-badge-usuario">Master</span>
-									<span class="ats-l-nome">João Pedro Neto</span>
-									<span class="badge badge-pill ats-badge-uf">RJ</span>
-								</div>
-								<div class="row">
-									<span class="ats-l-email">tiojoao@email.com.br</span>
-								</div>
-								<div class="row">
-									<span class="ats-l-cpf">12627753703</span>
-								</div>
+						<!-- Item excluido -->
+						<div class="row  align-items-center ats-lista">
+							<div class="col">
+								<span class="badge badge-pill ats-badge-usuario">Master</span>
+								<!-- [Nome] -->
+								<span class="ats-l-nome">João Pedro Neto</span>
+								<!-- [Local] -->
+								<span class="badge badge-pill ats-badge-uf">RJ</span>
+								<!-- [Email] -->
+								<span class="ats-l-email">tiojoao@email.com.br</span>
+								<!-- [CPF] -->
+								<span class="ats-l-cpf">12627753703</span>
 							</div>
-							<div class="col-2 col-md-2">
-								<div class="ats-badge-align">
-									<span class="badge badge-pill ats-badge-excluido float-right">Excluído</span>
-								</div>	
-							</div>
-							<div class="col-2 col-md-1">
+							<div class="col-auto">
+								<!-- [Label - Status] -->
+								<span class="badge badge-pill ats-badge-excluido">excluido</span>
+								<!-- [Bullets - Dropdown] -->
 								<div class="dropdown float-right">
-									<span class="dropdown-toggle ats-bullets" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									</button>
+									<span class="dropdown-toggle ats-bullets" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+									 aria-expanded="false"></span>
 									<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 										<a class="dropdown-item" href="#">
 											<i class="icon-ats-lupa"></i>Visualizar
@@ -251,33 +269,29 @@
 											<i class="icon-ats-trash"></i>Excluir
 										</a>
 									</div>
-								</div>			
-							</div>	
+								</div>
+							</div>
 						</div>
-						<!-- Item Lista Ativo -->
-						<div class="row align-items-center ats-lista">
-							<div class="col-8 col-md-9">
-								<div class="row">
-									<span class="badge badge-pill ats-badge-usuario">Master</span>
-									<span class="ats-l-nome">João Pedro Neto</span>
-									<span class="badge badge-pill ats-badge-uf">RJ</span>
-								</div>
-								<div class="row">
-									<span class="ats-l-email">tiojoao@email.com.br</span>
-								</div>
-								<div class="row">
-									<span class="ats-l-cpf">12627753703</span>
-								</div>
+						<!-- Item Ativo -->
+						<div class="row  align-items-center ats-lista">
+							<div class="col">
+								<span class="badge badge-pill ats-badge-usuario">Master</span>
+								<!-- [Nome] -->
+								<span class="ats-l-nome">João Pedro Neto</span>
+								<!-- [Local] -->
+								<span class="badge badge-pill ats-badge-uf">RJ</span>
+								<!-- [Email] -->
+								<span class="ats-l-email">tiojoao@email.com.br</span>
+								<!-- [CPF] -->
+								<span class="ats-l-cpf">12627753703</span>
 							</div>
-							<div class="col-2 col-md-2">
-								<div class="ats-badge-align">
-									<span class="badge badge-pill ats-badge-ativo float-right">Ativo</span>
-								</div>	
-							</div>
-							<div class="col-2 col-md-1">
+							<div class="col-auto">
+								<!-- [Label - Status] -->
+								<span class="badge badge-pill ats-badge-ativo">Ativo</span>
+								<!-- [Bullets - Dropdown] -->
 								<div class="dropdown float-right">
-									<span class="dropdown-toggle ats-bullets" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									</button>
+									<span class="dropdown-toggle ats-bullets" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+									 aria-expanded="false"></span>
 									<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 										<a class="dropdown-item" href="#">
 											<i class="icon-ats-lupa"></i>Visualizar
@@ -289,33 +303,29 @@
 											<i class="icon-ats-trash"></i>Excluir
 										</a>
 									</div>
-								</div>			
-							</div>	
+								</div>
+							</div>
 						</div>
-						<!-- Item Lista Ativo -->
-						<div class="row align-items-center ats-lista">
-							<div class="col-8 col-md-9">
-								<div class="row">
-									<span class="badge badge-pill ats-badge-usuario">Master</span>
-									<span class="ats-l-nome">João Pedro Neto</span>
-									<span class="badge badge-pill ats-badge-uf">RJ</span>
-								</div>
-								<div class="row">
-									<span class="ats-l-email">tiojoao@email.com.br</span>
-								</div>
-								<div class="row">
-									<span class="ats-l-cpf">12627753703</span>
-								</div>
+						<!-- Item Ativo -->
+						<div class="row  align-items-center ats-lista">
+							<div class="col">
+								<span class="badge badge-pill ats-badge-usuario">Master</span>
+								<!-- [Nome] -->
+								<span class="ats-l-nome">João Pedro Neto</span>
+								<!-- [Local] -->
+								<span class="badge badge-pill ats-badge-uf">RJ</span>
+								<!-- [Email] -->
+								<span class="ats-l-email">tiojoao@email.com.br</span>
+								<!-- [CPF] -->
+								<span class="ats-l-cpf">12627753703</span>
 							</div>
-							<div class="col-2 col-md-2">
-								<div class="ats-badge-align">
-									<span class="badge badge-pill ats-badge-ativo float-right">Ativo</span>
-								</div>	
-							</div>
-							<div class="col-2 col-md-1">
+							<div class="col-auto">
+								<!-- [Label - Status] -->
+								<span class="badge badge-pill ats-badge-ativo">Ativo</span>
+								<!-- [Bullets - Dropdown] -->
 								<div class="dropdown float-right">
-									<span class="dropdown-toggle ats-bullets" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									</button>
+									<span class="dropdown-toggle ats-bullets" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+									 aria-expanded="false"></span>
 									<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 										<a class="dropdown-item" href="#">
 											<i class="icon-ats-lupa"></i>Visualizar
@@ -327,33 +337,29 @@
 											<i class="icon-ats-trash"></i>Excluir
 										</a>
 									</div>
-								</div>			
-							</div>	
+								</div>
+							</div>
 						</div>
-						<!-- Item Lista Ativo -->
-						<div class="row align-items-center ats-lista">
-							<div class="col-8 col-md-9">
-								<div class="row">
-									<span class="badge badge-pill ats-badge-usuario">Master</span>
-									<span class="ats-l-nome">João Pedro Neto</span>
-									<span class="badge badge-pill ats-badge-uf">RJ</span>
-								</div>
-								<div class="row">
-									<span class="ats-l-email">tiojoao@email.com.br</span>
-								</div>
-								<div class="row">
-									<span class="ats-l-cpf">12627753703</span>
-								</div>
+						<!-- Item Ativo -->
+						<div class="row  align-items-center ats-lista">
+							<div class="col">
+								<span class="badge badge-pill ats-badge-usuario">Master</span>
+								<!-- [Nome] -->
+								<span class="ats-l-nome">João Pedro Neto</span>
+								<!-- [Local] -->
+								<span class="badge badge-pill ats-badge-uf">RJ</span>
+								<!-- [Email] -->
+								<span class="ats-l-email">tiojoao@email.com.br</span>
+								<!-- [CPF] -->
+								<span class="ats-l-cpf">12627753703</span>
 							</div>
-							<div class="col-2 col-md-2">
-								<div class="ats-badge-align">
-									<span class="badge badge-pill ats-badge-ativo float-right">Ativo</span>
-								</div>	
-							</div>
-							<div class="col-2 col-md-1">
+							<div class="col-auto">
+								<!-- [Label - Status] -->
+								<span class="badge badge-pill ats-badge-ativo">Ativo</span>
+								<!-- [Bullets - Dropdown] -->
 								<div class="dropdown float-right">
-									<span class="dropdown-toggle ats-bullets" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									</button>
+									<span class="dropdown-toggle ats-bullets" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+									 aria-expanded="false"></span>
 									<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 										<a class="dropdown-item" href="#">
 											<i class="icon-ats-lupa"></i>Visualizar
@@ -365,50 +371,12 @@
 											<i class="icon-ats-trash"></i>Excluir
 										</a>
 									</div>
-								</div>			
-							</div>	
-						</div>
-						<!-- Item Lista Ativo -->
-						<div class="row align-items-center ats-lista">
-							<div class="col-8 col-md-9">
-								<div class="row">
-									<span class="badge badge-pill ats-badge-usuario">Master</span>
-									<span class="ats-l-nome">João Pedro Neto</span>
-									<span class="badge badge-pill ats-badge-uf">RJ</span>
-								</div>
-								<div class="row">
-									<span class="ats-l-email">tiojoao@email.com.br</span>
-								</div>
-								<div class="row">
-									<span class="ats-l-cpf">12627753703</span>
 								</div>
 							</div>
-							<div class="col-2 col-md-2">
-								<div class="ats-badge-align">
-									<span class="badge badge-pill ats-badge-ativo float-right">Ativo</span>
-								</div>	
-							</div>
-							<div class="col-2 col-md-1">
-								<div class="dropdown float-right">
-									<span class="dropdown-toggle ats-bullets" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									</button>
-									<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-										<a class="dropdown-item" href="#">
-											<i class="icon-ats-lupa"></i>Visualizar
-										</a>
-										<a class="dropdown-item" href="#">
-											<i class="icon-ats-editar"></i>Editar
-										</a>
-										<a class="dropdown-item" href="#">
-											<i class="icon-ats-trash"></i>Excluir
-										</a>
-									</div>
-								</div>			
-							</div>	
 						</div>
 						<!-- [Paginação] -->
 						<nav aria-label="Page navigation example">
-							<ul class="pagination pagination-lg justify-content-center">
+							<ul class="pagination justify-content-center">
 								<li class="page-item disabled">
 									<a class="page-link" href="#" tabindex="-1">Anterior</a>
 								</li>
@@ -443,7 +411,7 @@
 						<form>
 							<div class="form-row">
 								<div class="form-group col col-sm-12">
-									<label for="loginAltEmailCPF">Alterar Email ou CPF</label>
+									<label for="loginAltEmailCPF">Email ou CPF</label>
 									<input type="email" class="form-control" id="loginAltEmailCPF" placeholder="">
 								</div>
 								<div class="form-group col col-sm-12">

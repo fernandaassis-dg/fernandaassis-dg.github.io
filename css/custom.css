@@ -20,10 +20,22 @@ body {
 	font-family:'Ubuntu', sans-serif;
 }
 
+/* Grid */
 
-/* [CSS Global]*/
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
 
-aside a:hover{
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+/* Barra Lateral */
+
+aside a:hover
 	text-decoration: none;
 }
 
@@ -81,6 +93,7 @@ fieldset {
 		width: auto;
 		padding: 10px;
 		color: #00bcd4;
+		background-color: #f0f0f0;
 	}
 
 	fieldset h3 {
@@ -110,6 +123,13 @@ input, select, textarea {
 		-moz-transition: border-color .2s ease-in-out,box-shadow .2s ease-in-out;
 		-ms-transition: border-color .2s ease-in-out,box-shadow .2s ease-in-out;
 		-o-transition: border-color .2s ease-in-out,box-shadow .2s ease-in-out;
+}
+
+/* [Seta Select] */
+
+.custom-select {
+    background: url(../img/ats-select.svg) no-repeat right #fff;
+    background-size: 22px;
 }
 
 /* [Check Stilizado] */
@@ -192,6 +212,7 @@ input, select, textarea {
 /* [Icons da Tabelas, coluna de ações] */
 
 th.ats-col-icons {
+	display: block;
 	width: 115px;
 }
 
@@ -280,7 +301,7 @@ th.ats-col-icons {
 }
 
 .container-fluid .logo {
-	font-size:134px;
+	font-size:120px;
 	color:#fff;
 	padding: 0;
 	position: absolute;
@@ -296,9 +317,8 @@ th.ats-col-icons {
 
 	
 .ats-banner {
-	display: 	block;
+	display: block;
 	font-family:'Ubuntu', sans-serif;
-	display:table;
 	width: 100%;
 	position:absolute;
 	background: url(../img/banner-bg-footer.svg), url(../img/banner-bg-imagem.png);	
@@ -311,7 +331,7 @@ th.ats-col-icons {
 	.ats-banner .ats-banner-txt button {
 		border-radius:0.20rem;
 		border-width: 2px;
-		padding: 15px 35px
+		padding: 12px 35px
 	}
 
 		.ats-banner .ats-banner-txt .btn-outline-light:hover {
@@ -346,7 +366,7 @@ th.ats-col-icons {
 	.ats-banner .row h2 {
 		/* color: #00bcd4 ; Azul Padrão*/
 		text-align: center;
-		margin-bottom: 2em;
+		margin-bottom: 1.2em;
 	}
 
 	.ats-banner form {
@@ -354,18 +374,18 @@ th.ats-col-icons {
 	}	
 
 	.ats-banner .row:first-child {
-		margin-bottom: 100px;
+		margin-bottom: 42px;
 		position: relative;
-		top: 120px;
+		top: 90px;
 	}
 
 .ats-login {
 	background-color: #ffffff;
-	padding: 20% 12%;
+	padding: 3em 2.3em .5em;
 	border-radius: 10px;
 	box-shadow: 0px 0px 42.5px 7.5px rgba(19, 21, 25, 0.24);
 	color: #888;
-	height: 514px;
+	height: auto;
 	margin-top: 42px;
 }
 
@@ -376,18 +396,22 @@ th.ats-col-icons {
 	.ats-login .form-group .form-control {
 		font-family:'Ubuntu', sans-serif;
 		color:#00bcd4;
-		border: 1.5px solid #bdcde4; 
-		margin-bottom: 40px;
+		border: 1px solid #bdcde4; 
+		margin-bottom: 24px;
 	}
 
 	.ats-login .form-group .form-control:hover, .ats-login .form-group .form-control:focus {
-		border: 1.5px solid #00bcd4;
+		border: 1px solid #00bcd4;
 		box-shadow: 0px 0px 15.3px 2.7px rgba(0, 188, 212, 0.2);
 	}	
 
 		.ats-login .form-group .form-control:placeholder{
 			color:#bdcde4!important;
 		}
+
+	.ats-login label {
+		color: #8999af;
+	}	
 
 .ats-btn-login {
 	text-align: center;
@@ -400,10 +424,10 @@ th.ats-col-icons {
 		color: #fff;
 		font-family:'Ubuntu', sans-serif;
 		width:90%;
-		padding: 0.8em;
+		padding: 0.65em;
 		margin-top: 1.4em;
 		border:0;
-		border-radius: 0.20rem;
+		border-radius: 0.15rem;
 			background-image: -webkit-linear-gradient( 36deg, rgb(63,195,133) 0%, rgb(60,189,163) 52%, rgb(57,183,195) 100%);
 			background-image: -moz-linear-gradient( 36deg, rgb(63,195,133) 0%, rgb(60,189,163) 52%, rgb(57,183,195) 100%);
 			background-image: -ms-linear-gradient( 36deg, rgb(63,195,133) 0%, rgb(60,189,163) 52%, rgb(57,183,195) 100%);
@@ -421,13 +445,14 @@ th.ats-col-icons {
 
 /* Footer da área de Login */
 .ats-login-footer {
-	margin-top: 20px;
+	margin: 42px -36px 14px;
 	color: #6a788e;
 }	
 
 	.ats-login-footer a {
 		color: #6a788e;
 		padding-left: 30px;
+		font-size: 0.85rem;
 	}
 
 	.ats-login-footer a:hover{
@@ -438,15 +463,13 @@ th.ats-col-icons {
 
 	.ats-login-footer i {
 		position: absolute;
-		font-size: 30px;
-		margin-top: -5px;
-		margin-left: -34px;
+		font-size: 1.9em;
+		margin-top: -2px;
+		margin-left: -26px;
 	}
-	/*Hack para Edge Brownser*/
-	@supports (-ms-ime-align: auto) {
-		.ats-login-footer {
-			margin-bottom: 100px; 
-		}
+
+	_:-ms-fullscreen, :root .ats.login-footer { 
+		position:none;
 	}
 
 /* [BreadCrumb - Protocolo Web] */
@@ -616,6 +639,7 @@ th.ats-col-icons {
 			.ats-sidebar nav ul li a {
 				display: block;
 				padding: 20px 10px;
+				font-size: 14px;
 				font-weight: 500;
 				color: #fff; 
 				transition: ease .2s;
@@ -647,14 +671,14 @@ th.ats-col-icons {
 				padding-left: 30px!important;
 			}
 
-.ats-painel {
-	padding: 50px;
-}	
 /* Logo Painel */
 .ats-logo {
 	padding: 60px 20px;
 }
 
+.ats-painel {
+	padding-top: 50px;
+}
 	.ats-painel h1 {
 		color:#00bcd4;
 		text-transform: capitalize;
@@ -804,20 +828,19 @@ th.ats-col-icons {
 		}
 
 /* [Tela Consultar Usuário] */
-
 .ats-lista {
 	background-color: #fff;
-	min-height: 80px;
-	padding: 10px;
+	background-color: #fff;
+	padding: 15px;
 	border-left: 5px solid transparent;
-	margin: 0 0 15px;
+		margin: 0px 0 20px 2px;
 	transition: ease .2s;
 		-webkit-transition: ease .2s; /* Safari */
 		-moz-transition: ease .2s;
 		-ms-transition: ease .2s;
 		-o-transition: ease .2s;
-	margin-top: 30px;	
 }
+
 	.ats-lista:hover {
 		box-shadow: 0px 10px 16px 1px rgba(119, 133, 136, 0.2);
 		border-left: 5px solid #00bcd4;
@@ -826,6 +849,12 @@ th.ats-col-icons {
 			-moz-transition: ease .2s;
 			-ms-transition: ease .2s;
 			-o-transition: ease .2s;
+	}
+
+	/* Correções de Margens */
+
+	.ats-lista .col, .ats-lista .col-auto {
+		padding: 0;
 	}
 
 	.ats-lista .row{
@@ -843,18 +872,22 @@ th.ats-col-icons {
 
 		/* Componentes da lista */
 		.ats-l-nome{
+			display: inline-flex;
 			color: #141514;
 			text-transform: uppercase;
 			font-weight: 700;
-			font-size: 18px;
-			margin-right: 15px;
+			font-size: 16px;
+			margin: 0 5px 5px 0;
 		}
 
 		.ats-l-email{
+			display: block;
 			color: #00bcd4;
 			font-style: italic;
-			font-size: 16px;
+			font-size: 14px;
 			text-transform: lowercase;
+			padding-top: 4px;
+			word-wrap: break-word;
 		}
 
 			.ats-l-email:before {
@@ -863,8 +896,9 @@ th.ats-col-icons {
 			}
 
 		.ats-l-cpf {
+			display: block;
 			color: gray;
-			font-size: 16px;
+			font-size: 14px;
 		}
 			.ats-l-cpf:before {
 				content: 'CPF: ';
@@ -878,10 +912,11 @@ th.ats-col-icons {
 		.ats-bullets:before {
 			content:url('../img/ats-bullets.svg');
 			display: block;
-			width: 42px;
+			width: 32px;
 			height: auto;
 			background-color: #fff;
 			cursor: pointer;
+			padding: 4px 0 0;
 		}
 
 		.dropdown-item i {
@@ -900,17 +935,17 @@ th.ats-col-icons {
 		}
 
 		/* Etiquetas */
-		.ats-badge-align {
-			text-align: center;
+		.badge {
+			margin-right: 12px;
 		}
 
 		.ats-badge-usuario {
 			background-color:#d3dcd7;
 			color:#404643;
 			text-transform: uppercase;
-			font-size: 16px;
-			padding: 5px 15px;
-			margin-right: 12px;
+			font-size: 12px;
+			padding: 7px 15px;
+			margin: 0 5px 5px 0;
 
 		}
 
@@ -919,18 +954,7 @@ th.ats-col-icons {
 			text-transform: uppercase;
 			border-radius: 2px;
 			border: 1px solid #28d584;
-			font-size: 16px;
-		}
-
-		.ats-badge-ativo {
-			background-color:#28d584;
-			text-transform: capitalize!important;
-			color:#fff;
 			font-size: 14px;
-			font-weight: 600;
-			padding: 10px 14px;
-			border: 1.5px solid transparent;
-			text-transform: capitalize;
 		}
 
 		.ats-badge-status {
@@ -946,105 +970,190 @@ th.ats-col-icons {
 			margin-left: 10px;
 		}
 
+		.ats-badge-ativo {
+			background-color: #28d584;
+			text-transform: capitalize!important;
+			color: #fff;
+			font-weight: 600;
+			padding: 10px 14px;
+			border: 1.5px solid transparent;
+			text-transform: capitalize;
+			font-size: 12px;
+			margin-right: 10px;
+		}
+
 		.ats-badge-bloqueado {
 			color:#4376ec;
-			font-size: 14px;
 			font-weight: 600;
 			padding: 10px 15px;
 			border: 1.5px solid #4376ec;
 			text-transform: capitalize;
+			font-size: 12px;
+			margin-right: 10px;
 		}
 
 		.ats-badge-excluido {
 			background-color:#d3dcd7;
 			color:#404643;
-			font-size: 14px;
 			font-weight: 600;
 			padding: 10px 15px;
 			border: 1.5px solid transparent;
 			text-transform: capitalize;
+			font-size: 12px;
+			margin-right: 10px;
 		}
 
-/*[BreakPoints]*/
-/* A partir de tablets */
-@media (min-width: 768px) {
-	/* Uitlitário para correção de tabelas de 6 col em layouts lg ou superior */
-	.no-scroll {
-		overflow: hidden!important;
+	/*[BreakPoints]*/
+	/* A partir de tablets */
+	@media (min-width: 768px) {
+		/* Uitlitário para correção de tabelas de 6 col em layouts lg ou superior */
+		.no-scroll {
+			overflow: hidden!important;
+		}
 	}
-	.ats-painel {
-		padding: 10px 0;
-	}
-}
 
-/* A partir de monitores grandes */
+	/* A partir de monitores grandes */
 
-@media (min-width: 992px) {
-	.ats-banner {
-		height:100%
+	@media (min-width: 992px) {
+		.ats-banner {
+			height:100%
+		}
+		.ats-banner .ats-banner-txt {
+			padding-top: 90px;
+		}
 	}
-	.ats-banner .ats-banner-txt {
-		padding-top: 150px;
-	}
-}
 
-/* Até smartphones na visualização landscape */
-@media (max-width:767.98px) {
-	body {
-		padding-top: 60px;
-	}
-	.ats-topbar {
-		display: inline-block;
-	}
-	.ats-banner {
-		padding:0;
-	}
-	.ats-banner form {
-		padding: 0;
-		height:auto;
-	}
-	.ats-space {
-	display: block;
-	height: 150px;
-	}
-	.ats-login {
-		height: 500;
-		padding: 15% 12%;
-	}	
-	.ats-sidebar{
-		display: none!important;
-	}	
-}
+	/* Até tablets */
+	@media (max-width: 991.98px) {
+		.container-fluid .logo {
+			font-size:100px;
+			align-items: center;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+			width: 100%;
+			margin-top: 30px;
+		}
 
-/* Até tablets */
-@media (max-width: 991.98px) {
-	.container-fluid .logo {
-		font-size:100px;
-		align-items: center;
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: center;
-		width: 100%;
-		margin-top: 30px;
-	}
-	.ats-banner {
-		display:block;
-	}	
-	.ats-banner .ats-banner-txt {
-		text-align: center;
-	}	
+		.container {
+			max-width: 100%;
+		}
 		
-	.ats-banner .row:first-child {
-		top: 175px;
+		.ats-banner .ats-banner-txt {
+			text-align: center;
+		}	
+			
+		.ats-banner .row:first-child {
+			top: 175px;
+		}
+		.ats-bullets:before {
+				width: 23px;
+		}
+		.ats-badge-align .badge {
+				margin-right: 10px;
+		}	
+		/* Remove Bug do MouseHover no Mobile */
+		.card:hover {
+			color: inherit;
+			box-shadow: none;
+			margin-top: inherit;
+			background-image: none;
+			transition: none;
+		}
+		.ats-white {
+		color: #00bcd4 !important;
+		}	
 	}
 
-	/* Remove Bug do MouseHover no Mobile */
-	.card:hover {
-		color: inherit;
-		box-shadow: none;
-		margin-top: inherit;
-		background-image: none;
-		transition: none;
+	/* Até smartphones na visualização Landscape */
+	@media (max-width:767.98px) {
+		body {
+			padding-top: 60px;
+		}
+
+		.ats-painel {
+			padding-top: 20px;
+		}
+
+		.ats-painel h1 {
+			font-size: 2.2em;
+		}
+
+		.ats-topbar {
+			display: inline-block;
+		}
+		.ats-banner {
+			padding:0;
+		}
+		.ats-banner form {
+			padding: 0;
+			height:auto;
+		}
+
+		.ats-sidebar{
+			display: none!important;
+		}	
+			/* [Lista de Consulta de usuário] Ajustes */
+			.ats-lista  {
+				padding: 6px;
+			}
+
+			.ats-badge-usuario {
+				font-size: 12px;
+			}
+			.ats-badge-ativo {
+				font-size: 12px;
+				padding: 5px;
+			}
+			.ats-badge-bloqueado {
+				font-size: 12px;
+				border-width: 1px;
+				padding: 5px;	
+			}
+			.ats-badge-excluido {
+				font-size: 12px;
+				padding: 5px;
+			}
+			
+			.ats-l-nome {
+				font-size: 12px;
+				margin-bottom: 0;
+			}
+
+			.ats-l-email {
+				font-size: 12px;
+				
+			}
+
+			.ats-l-cpf {
+				font-size: 12px;	
+			}	
+
+			.ats-badge-usuario{
+				font-size: 12px;
+				padding: 5px 8px;
+				margin-bottom: 0;
+			}
+
+			.ats-badge-uf {
+				font-size:12px;
+				padding: 2px;
+				margin-bottom: 0;
+			}
+	}
+
+	/* Até smartphones na visualização Landscape */
+	@media (max-width: 575.98px) { 
+		.ats-painel h1 {
+			font-size: 2em;
+		}
+		.ats-badge-status {
+			font-size: 21px;
+		}
+		.ats-painel {
+			padding-top: 20px;
+			padding-left: 0;
+			padding-right: 0;
+		}	
 	}	
-}

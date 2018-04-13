@@ -80,11 +80,11 @@
 							<a href="javascript:window.history.go(-1)" class="ats-bread"><i class="icon-arrow-left2"></i></a>
 							<ol class="breadcrumb">
 						    	<li class="breadcrumb-item"><a href="painel.html">Inicio</a></li>
-						    	<li class="breadcrumb-item">Usuário</li>
+						    	<li class="breadcrumb-item">Manutenção dos Usuários</li>
 							</ol>
 						</nav>
 						<div class="row">
-							<h1>Alterar Dados Cadastrais</h1>
+							<h1>Incluir Usuário</h1>
 						</div>
 						<form>
 							<div class="form-row">
@@ -103,14 +103,65 @@
 									<input type="text" class="form-control" id="cadastroCPF" placeholder="" required>
 								</div>
 								<div class="form-group col-md-6">
+									<label for="cadastroPerfil">Perfil*</label>
+								    <select class="custom-select" id="cpJuntaDestino" required>
+										 <option>Master</option>
+										 <option>Master Junta</option>
+										 <option>Junta</option>
+										 <option>Cidadão</option>
+								    </select>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="cadastroUFJuntaComercial">UF da Junta Comercial*</label>
+								    <select class="custom-select" id="cpJuntaDestino" required>
+										 <option>Ativo</option>
+										 <option>Bloqueado</option>
+										 <option>Excluído</option>
+								    </select>
+								</div>
+								<div class="form-group col-md-6">
 									<label for="cadastroStatusdoUsuario">Status do Usuário*</label>
 								    <select class="custom-select" id="cadastroStatusdoUsuario" required>
-										<option>Todos</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
+										 <option>RO</option> 
+										 <option>AC</option> 
+										 <option>AM</option> 
+										 <option>RR</option> 
+										 <option>PA</option> 
+										 <option>AP</option> 
+										 <option>TO</option> 
+										 <option>MA</option> 
+										 <option>PI</option> 
+										 <option>CE</option> 
+										 <option>RN</option> 
+										 <option>PB</option> 
+										 <option>PE</option> 
+										 <option>AL</option> 
+										 <option>SE</option> 
+										 <option>BA</option> 
+										 <option>MG</option> 
+										 <option>ES</option> 
+										 <option>RJ</option> 
+										 <option>SP</option> 
+										 <option>PR</option> 
+										 <option>SC</option> 
+										 <option>RS</option> 
+										 <option>MT</option> 
+										 <option>GO</option> 
+										 <option>DF</option> 
+										 <option>MS</option>
 								    </select>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="cadastroSenha">Senha*</label>
+									<input type="text" class="form-control" id="cadastroSenha" placeholder="" required>
+								</div>
+								<div class="form-group col-md-6">
+									<label for="cadastroConfirmarSenha">Confirmar Senha*</label>
+									<input type="text" class="form-control" id="cadastroConfirmarSenha" placeholder="" required>
 								</div>
 							</div>
 							<div class="form-row">

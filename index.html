@@ -27,6 +27,7 @@
 				<div class="row">					
 					<div class="col-lg-6 col-md-12 ats-banner-txt">
 						<h1>Integração mais simples</h1>
+						<hr>
 						<p>Portal de integração das juntas comerciais para facilitar e agilizar o processo de abertura de filiais em outros estados.</p>
 						<p>Se você é novo usuário basta se casdastrar para utilizar o serviço.</p>
 						<a href="#" data-toggle="modal" data-target="#modalLoginCadastroDeUsuario">
@@ -38,30 +39,28 @@
 							<div class="ats-login">
 								<h2>Entrar</h2>	
 							  	<div class="form-group">
-								    <!-- [Email] --><input type="email" class="form-control form-control-lg" id="loginEmailCPF" aria-describedby="emailHelp" placeholder="Email ou CPF">
+									<!-- [Email] -->
+									<label for="loginEmailCPF">Email ou CPF*</label>
+									<input type="email" class="form-control form-control-lg" id="loginEmailCPF" aria-describedby="emailHelp" placeholder="">
 							  	</div>
 							  	<div class="form-group">
-								    <!-- [Senha] --><input type="password" class="form-control form-control-lg" id="loginSenha" placeholder="Senha">
+									<!-- [Senha] -->
+									<label for="loginSenha">Senha*</label>
+									<input type="password" class="form-control form-control-lg" id="loginSenha" placeholder="">
 							  	</div>
 							  	<div class="ats-btn-login">
 							  		<a href="painel.html" class="btn btn-lg ats-btn-lg">Entrar</a>
-							  	</div>
+								</div>
+								<!-- [links] -->
+								<div class="row ats-login-footer align-items-center">
+									<div class="col">
+										<a href="#" data-toggle="modal" data-target="#modalEsqueceuASenha" style="display:block; text-align:center">
+											<i class="icon-ats-lembrar"></i>
+											Esqueceu a senha?
+										</a>
+									</div>
+								</div>
 							</div> 
-							<!-- Inserir links de recuperação e alteração de senha aqui -->
-							<div class="row ats-login-footer align-items-center">
-								<div class="col">
-									<a href="#" data-toggle="modal" data-target="#modalAlterarSenha">
-										<i class="icon-ats-alterarSenha"></i>
-										Alterar senha
-									</a>
-								</div>
-								<div class="col">
-									<a href="#" data-toggle="modal" data-target="#modalEsqueceuASenha" class="float-right">
-										<i class="icon-ats-lembrar"></i>
-										Esqueceu a senha?
-									</a>
-								</div>
-							</div>
 						</form>
 					</div>
 				</div>				
@@ -69,7 +68,6 @@
 				<!-- Colocar Logo das Juntas Aqui -->
 				</footer>
 			</div>
-			<div class="ats-space d-none d-sm-block d-md-block"></div>
 		</div>
 		<!--[Modal: Novo Cadastro] -->
 		<div class="modal fade" id="modalLoginCadastroDeUsuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -109,48 +107,6 @@
 							<div class="modal-footer">
 								<button type="button" class="btn btn-dark" data-dismiss="modal">Cancelar</button>
 								<button type="submit" class="btn btn-primary">Cadastrar</button>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!--[Modal: Alterar Senha]-->
-		<div class="modal fade" id="modalAlterarSenha" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Alterar Senha</h5>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-					<div class="modal-body ats-modal">
-						<!-- Conteúdo do Corpo do Modal -->
-						<form>
-							<div class="form-row">
-								<div class="form-group col col-sm-12">
-									<label for="loginAltEmailCPF">Alterar Email ou CPF</label>
-									<input type="email" class="form-control" id="loginAltEmailCPF" placeholder="">
-								</div>
-								<div class="form-group col col-sm-12">
-									<label for="loginAltSenahAtual">Senha Atual</label>
-									<input type="text" class="form-control" id="loginAltSenahAtual" placeholder="" required="">
-								</div>
-							</div>
-							<div class="form-row">
-								<div class="form-group col col-sm-12">
-									<label for="loginAltNovaSenha">Nova Senha</label>
-									<input type="text" class="form-control" id="loginAltNovaSenha" placeholder="" required>
-								</div>
-								<div class="form-group col col-sm-12">
-									<label for="loginAltConfirmarSenha">Confirmar Nova Senha</label>
-									<input type="text" class="form-control" id="loginAltConfirmarSenha" placeholder="" required>
-								</div>
-							</div>		
-							<div class="modal-footer">
-								<button type="button" class="btn btn-dark" data-dismiss="modal">Cancelar</button>
-								<button type="submit" class="btn btn-primary">Confirmar</button>
 							</div>
 						</form>
 					</div>
