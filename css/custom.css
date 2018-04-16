@@ -20,19 +20,6 @@ body {
 	font-family:'Ubuntu', sans-serif;
 }
 
-/* Grid */
-
-.no-gutters {
-  margin-right: 0;
-  margin-left: 0;
-
-  > .col,
-  > [class*="col-"] {
-    padding-right: 0;
-    padding-left: 0;
-  }
-}
-
 /* Barra Lateral */
 
 aside a:hover {
@@ -211,9 +198,9 @@ input, select, textarea {
 
 /* [Icons da Tabelas, coluna de ações] */
 
-th.ats-col-icons {
-	display: table-cell;
-	width: 115px;
+.ats-col-icons {
+	width: 120px;
+	min-width: 120px;
 }
 
 .ats-i-act {
