@@ -462,14 +462,9 @@ th.ats-col-icons {
 	}
 
 	.ats-login-footer i {
-		position: absolute;
 		font-size: 1.9em;
 		margin-top: -2px;
 		margin-left: -26px;
-	}
-
-	_:-ms-fullscreen, :root .ats.login-footer { 
-		position:none!important;
 	}
 
 /* [BreadCrumb - Protocolo Web] */
@@ -1016,7 +1011,7 @@ th.ats-col-icons {
 
 	@media (min-width: 992px) {
 		.ats-banner {
-			height:100%
+			min-height: 750px;
 		}
 		.ats-banner .ats-banner-txt {
 			padding-top: 90px;
@@ -1032,7 +1027,7 @@ th.ats-col-icons {
 			flex-direction: row;
 			flex-wrap: wrap;
 			justify-content: center;
-			width: 100%;
+			width: 98%;
 			margin-top: 30px;
 		}
 

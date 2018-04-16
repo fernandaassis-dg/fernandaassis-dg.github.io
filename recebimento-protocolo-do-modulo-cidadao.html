@@ -96,6 +96,10 @@
 									<input type="text" class="form-control" id="recebimentoNProtocolo" placeholder="" disabled>
 								</div>
 								<div class="form-group col-lg-3 col-md-6">
+									<label for="recebimentoNDoArquivamento">Hash do Protocolo</label>
+									<input type="text" class="form-control" id="recebimentoNDoArquivamento" placeholder="" disabled>
+								</div>
+								<div class="form-group col-lg-3 col-md-6">
 									<label for="recebimentoDataDeEntrada">Data de Entrada</label>
 									<input type="text" class="form-control" id="recebimentoDataDeEntrada" placeholder="" disabled>
 								</div>
@@ -103,15 +107,15 @@
 									<label for="recebimentoNDoArquivamento">Nº do Arquivamento</label>
 									<input type="text" class="form-control" id="recebimentoNDoArquivamento" placeholder="" disabled>
 								</div>
-								<div class="form-group col-lg-4 col-md-6">
+								<div class="form-group col-lg-3 col-md-6">
 									<label for="recebimentoDataDoArquivamento">Data do Arquivamento</label>
 									<input type="text" class="form-control" id="recebimentoDataDoArquivamento" placeholder="" disabled>
 								</div>
-								<div class="form-group col-lg-4 col-md-6">
+								<div class="form-group col-lg-3 col-md-6">
 									<label for="recebimentoNireDaSede">NIRE da Sede</label>
 									<input type="text" class="form-control" id="recebimentoNireDaSede" placeholder="" disabled>
 								</div>
-								<div class="form-group col-lg-4 col-md-6">
+								<div class="form-group col-lg-3 col-md-6">
 									<label for="recebimentoCnpjDaSede">CNPJ da Sede</label>
 									<input type="text" class="form-control" id="recebimentoCnpjDaSede" placeholder=""  disabled>
 								</div>
@@ -127,23 +131,81 @@
 							<fieldset>
 								<legend>Identificação do Cidadão</legend>
 								<div class="form-row">
-									<div class="form-group col">
-										<label for="recebimentoHashDoProtcolo">Hash do Protcolo</label>
-										<input type="text" class="form-control" id="recebimentoHashDoProtcolo" placeholder="" disabled>
+									<div class="form-group col-lg-3 col-md-6">
+										<label for="recebimentoCPF">CPF*</label>
+										<input type="value" class="form-control" id="recebimentoCPF" placeholder="" disabled>										
 									</div>
-									<div class="form-group col">
-										<label for="recebimentoEmail">Email</label>
-										<input type="text" class="form-control" id="recebimentoEmail" placeholder="" disabled>
+									<div class="form-group col-lg-3 col-md-6">
+										<label for="recebimentoNome">Nome</label>
+										<input type="text" class="form-control" id="recebimentoNome" placeholder="" disabled>
+									</div>
+									<div class="form-group col-lg-3 col-md-6">
+										<label for="recebimentoEmail">Email*</label>
+										<input type="email" class="form-control" id="recebimentoEmail" placeholder="" disabled>
+									</div>
+									<div class="form-group col-lg-3 col-md-6">
+										<div class="form-group col">
+										<button type="" class="btn btn-primary fix-align">Adicionar</button>
+									</div>
 									</div>
 								</div>
 								<div class="form-row">
+									<!-- [Tabela] -->
 									<div class="form-group col">
-										<label for="recebimentoCPF">CPF</label>
-										<input type="text" class="form-control" id="recebimentoCPF" placeholder="" disabled>
-									</div>
-									<div class="form-group col">
-										<label for="recebimentoNome">Nome</label>
-										<input type="text" class="form-control" id="recebimentoNome" placeholder="" disabled>
+										<div class="table-responsive">
+											<table class="table table-hover">
+												<thead class="thead-dark">
+													<tr>
+														<th scope="col">CPF</th>
+														<th scope="col">Nome</th>
+														<th scope="col">Email</th>
+														<th class="col ats-col-icons">Ação</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<th scope="row"></th>
+														<td></td>
+														<td></td>
+														<td>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-trash"></i>
+															</a>
+														</td>
+													</tr>
+													<tr>
+														<th scope="row"></th>
+														<td></td>
+														<td></td>
+														<td>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-trash"></i>
+															</a>
+														</td>
+													</tr>
+													<tr>
+														<th scope="row"></th>
+														<td></td>
+														<td></td>
+														<td>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-trash"></i>
+															</a>
+														</td>
+													</tr>
+													<tr>
+														<th scope="row"></th>
+														<td></td>
+														<td></td>
+														<td>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-trash"></i>
+															</a>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
 									</div>
 								</div>
 							</fieldset>
@@ -153,11 +215,34 @@
 									<div class="form-group col">
 									    <label for="recebimentoJuntasDisponiveis">Juntas Comerciais Disponiveis</label>
 									    <select class="custom-select" id="recebimentoJuntasDisponiveis">
-											<option>AC - Acre</option>
-											<option>AL - Alagoas</option>
-											<option>AM - Amazonas</option>
-											<option>BA - Bahia</option>
-											<option>CE Ceará</option>
+											<option>Acre</option>
+											<option>Alagoas</option>
+											<option>Amapá</option>
+											<option>Amazonas</option>
+											<option>Bahia</option>
+											<option>Ceará</option>
+											<option>Distrito Federal</option>
+											<option>Espírito Santo</option>
+											<option>Goiás</option>
+											<option>Maranhão</option>
+											<option>Mato Grosso</option>
+											<option>Mato Grosso do Sul</option>
+											<option>Minas</option>
+											<option>Gerais</option>
+											<option>Pará</option>
+											<option>Paraíba</option>
+											<option>Paraná</option>
+											<option>Pernambuco</option>
+											<option>Piauí</option>
+											<option>Rio de Janeiro</option>
+											<option>Rio Grande do Norte</option>
+											<option>Rio Grande do Sul</option>
+											<option>Rondônia</option>
+											<option>Roraima</option>
+											<option>Santa Catarina</option>
+											<option>São Paulo</option>
+											<option>Sergipe</option>
+											<option>Tocantins</option>
 									    </select>
 									</div>	
 								</div>
@@ -169,11 +254,9 @@
 									<div class="form-group col">
 									    <label for="recebimentoResultado">Resultado</label>
 									    <select class="custom-select" id="recebimentoJuntasDisponiveis">
-											<option>Selecione Resultado</option>
-											<option>Resultado 1</option>
-											<option>Resultado 2</option>
-											<option>Resultado 3</option>
-											<option>Resultado 4</option>
+											<option>Deferido</option>
+											<option>Indeferido</option>
+											<option>Em Exigência</option>
 									    </select>
 									</div>
 								</div>

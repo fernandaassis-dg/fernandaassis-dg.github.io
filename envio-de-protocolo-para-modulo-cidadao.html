@@ -97,26 +97,31 @@
 									<input type="text" class="form-control" id="enviarNProtocolo" placeholder="" required>
 								</div>
 								<div class="form-group col-lg-3 col-md-6">
-									<label for="enviarDataDeEntrada">Data de Entrada</label>
-									<input type="text" class="form-control" id="enviarDataDeEntrada" placeholder="">
+									<label for="enviarNDoArquivamento">Hash do Protocolo</label>
+									<input type="text" class="form-control" id="enviarNDoArquivamento" placeholder="" required>
 								</div>
 								<div class="form-group col-lg-3 col-md-6">
 									<label for="enviarNDoArquivamento">Nº do Arquivamento</label>
 									<input type="text" class="form-control" id="enviarNDoArquivamento" placeholder="" required>
 								</div>
-								<div class="form-group col-lg-4 col-md-6">
+								<div class="form-group col-lg-3 col-md-6">
+									<label for="enviarDataDeEntrada">Data de Entrada</label>
+									<input type="text" class="form-control" id="enviarDataDeEntrada" placeholder="">
+								</div>
+								
+								<div class="form-group col-lg-3 col-md-6">
 									<label for="enviarDataDoArquivamento">Data do Arquivamento*</label>
 									<input type="text" class="form-control" id="enviarDataDoArquivamento" placeholder="" required>
 								</div>
-								<div class="form-group col-lg-4 col-md-6">
+								<div class="form-group col-lg-3 col-md-6">
 									<label for="enviarNireDaSede">NIRE da Sede*</label>
 									<input type="text" class="form-control" id="enviarNireDaSede" placeholder="" required>
 								</div>
-								<div class="form-group col-lg-4 col-md-6">
+								<div class="form-group col-lg-3 col-md-6">
 									<label for="enviarCnpjDaSede">CNPJ da Sede*</label>
 									<input type="text" class="form-control" id="enviarCnpjDaSede" placeholder="" required>
 								</div>
-								<div class="form-group col-lg-12">
+								<div class="form-group col-lg-12 col-md-6">
 									<label for="enviarNomeEmpresarial">Nome Empresarial*</label>
 									<input type="text" class="form-control" id="enviarNomeEmpresarial" placeholder="" required>
 								</div>
@@ -124,24 +129,82 @@
 							<fieldset>
 								<legend>Identificação do Cidadão</legend>
 								<div class="form-row">
-									<div class="form-group col">
-										<label for="enviarHashDoProtcolo">Hash do Protcolo*</label>
-										<input type="text" class="form-control" id="enviarHashDoProtcolo" placeholder="" required>
-									</div>
-									<div class="form-group col">
-										<label for="enviarEmail">Email*</label>
-										<input type="email" class="form-control" id="enviarEmail" placeholder="" required>
-									</div>
-								</div>
-								<div class="form-row">
-									<div class="form-group col">
+									<div class="form-group col-lg-3 col-md-6">
 										<label for="enviarCPF">CPF*</label>
-										<input type="value" class="form-control" id="enviarCPF" placeholder="" required>
+										<input type="value" class="form-control" id="enviarCPF" placeholder="" required>										
 									</div>
-									<div class="form-group col">
+									<div class="form-group col-lg-3 col-md-6">
 										<label for="enviarNome">Nome</label>
 										<input type="text" class="form-control" id="enviarNome" placeholder="">
 									</div>
+									<div class="form-group col-lg-3 col-md-6">
+										<label for="enviarEmail">Email*</label>
+										<input type="email" class="form-control" id="enviarEmail" placeholder="" required>
+									</div>
+									<div class="form-group col-lg-3 col-md-6">
+										<div class="form-group col">
+										<button type="" class="btn btn-primary fix-align">Adicionar</button>
+									</div>
+									</div>
+								</div>
+								<div class="form-row">
+									<!-- [Tabela] -->
+									<div class="form-group col">
+										<div class="table-responsive">
+											<table class="table table-hover">
+												<thead class="thead-dark">
+													<tr>
+														<th scope="col">CPF</th>
+														<th scope="col">Nome</th>
+														<th scope="col">Email</th>
+														<th class="col ats-col-icons">Ação</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<th scope="row"></th>
+														<td></td>
+														<td></td>
+														<td>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-trash"></i>
+															</a>	
+														</td>
+													</tr>
+													<tr>
+														<th scope="row"></th>
+														<td></td>
+														<td></td>
+														<td>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-trash"></i>
+															</a>	
+														</td>
+													</tr>
+													<tr>
+														<th scope="row"></th>
+														<td></td>
+														<td></td>
+														<td>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-trash"></i>
+															</a>	
+														</td>
+													</tr>
+													<tr>
+														<th scope="row"></th>
+														<td></td>
+														<td></td>
+														<td>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-trash"></i>
+															</a>	
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>			
+									</div>	
 								</div>
 							</fieldset>
 							<fieldset>

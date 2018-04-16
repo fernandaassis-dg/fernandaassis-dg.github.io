@@ -91,39 +91,43 @@
 								<span class="badge badge-pill ats-badge-status">Status do Pedido</span>
 							</div>
 							<div class="form-row">
-								<div class="form-group col-lg-4 col-md-6 col-sm-12">
+								<div class="form-group col-lg-3 col-md-6 col-sm-12">
 									<label for="compNPedido">Nº do Pedido</label>
 									<input type="text" class="form-control" id="compNPedido" placeholder="" disabled>
 								</div>
-								<div class="form-group col-lg-4 col-md-6 col-sm-12">
+								<div class="form-group col-lg-3 col-md-6 col-sm-12">
 									<label for="compNProtocolo">Nº do Protocolo</label>
 									<input type="text" class="form-control" id="compNProtocolo" placeholder="" disabled>
 								</div>
-								<div class="form-group col-lg-4 col-md-6 col-sm-12">
+								<div class="form-group col-lg-3 col-md-6 col-sm-12">
+									<label for="compNDoArquivamento">Hash do Protocolo</label>
+									<input type="text" class="form-control" id="compNDoArquivamento" placeholder="" disabled>
+								</div>
+								<div class="form-group col-lg-3 col-md-6 col-sm-12">
 									<label for="compDataDeEntrada">Data de Entrada</label>
 									<input type="text" class="form-control" id="compDataDeEntrada" placeholder="" disabled>
 								</div>
-								<div class="form-group col-lg-4 col-md-6 col-sm-12">
+								<div class="form-group col-lg-3 col-md-6 col-sm-12">
 									<label for="compNDoArquivamento">Nº do Arquivamento</label>
 									<input type="text" class="form-control" id="compNDoArquivamento" placeholder="" disabled>
 								</div>
-								<div class="form-group col-lg-4 col-md-6 col-sm-12">
+								<div class="form-group col-lg-3 col-md-6 col-sm-12">
 									<label for="compDataDoArquivamento">Data do Arquivamento</label>
 									<input type="text" class="form-control" id="compDataDoArquivamento" placeholder="" disabled>
 								</div>
-								<div class="form-group col-lg-4 col-md-6 col-sm-12">
+								<div class="form-group col-lg-3 col-md-6 col-sm-12">
 									<label for="compNireDaSede">NIRE da Sede</label>
 									<input type="text" class="form-control" id="compNireDaSede" placeholder="" disabled>
 								</div>
-								<div class="form-group col-lg-4 col-md-6 col-sm-12 ">
+								<div class="form-group col-lg-3 col-md-6 col-sm-12">
 									<label for="compCnpjDaSede">CNPJ da Sede</label>
 									<input type="text" class="form-control" id="compCnpjDaSede" placeholder="" disabled>
 								</div>
-								<div class="form-group col-lg-4 col-md-6 col-sm-12">
+								<div class="form-group col-md-6 col-sm-12">
 									<label for="compNomeEmpresarial">Nome Empresarial</label>
 									<input type="text" class="form-control" id="compNomeEmpresarial" placeholder="" disabled>
 								</div>
-								<div class="form-group col-lg-4 col-md-6 col-sm-12">
+								<div class="form-group col-md-6 col-sm-12">
 									<label for="compJuntaComercialDeOrigem">Junta Comercial de Origem</label>
 									<input type="text" class="form-control" id="compJuntaComercialDeOrigem" placeholder="" disabled>
 								</div>
@@ -131,21 +135,81 @@
 							<fieldset>
 								<legend>Identificação do Cidadão</legend>
 								<div class="form-row">
-									<div class="form-group col-md-6 col-sm-12">
-										<label for="compHashDoProtcolo">Hash do Protcolo</label>
-										<input type="text" class="form-control" id="compHashDoProtcolo" placeholder="" disabled>
-									</div>
-									<div class="form-group col-md-6 col-sm-12">
+									<div class="form-group col-lg-3 col-md-6 col-sm-12">
 										<label for="compEmail">Email</label>
 										<input type="email" class="form-control" id="compEmail" placeholder="" disabled>
 									</div>
-									<div class="form-group col-md-6 col-sm-12">
+									<div class="form-group col-lg-3 col-md-6 col-sm-12">
 										<label for="compCPF">CPF</label>
 										<input type="text" class="form-control" id="compCPF" placeholder="" disabled>
 									</div>
-									<div class="form-group col-md-6 col-sm-12">
+									<div class="form-group col-lg-3 col-md-6 col-sm-12">
 										<label for="compNome">Nome</label>
 										<input type="text" class="form-control" id="compNome" placeholder="" disabled>
+									</div>
+									<div class="form-group col-lg-3 col-md-6">
+										<div class="form-group col">
+											<button type="" class="btn btn-primary fix-align">Adicionar</button>
+										</div>
+									</div>
+								</div>
+								<div class="form-row">
+									<!-- [Tabela] -->
+									<div class="form-group col">
+										<div class="table-responsive">
+											<table class="table table-hover">
+												<thead class="thead-dark">
+													<tr>
+														<th scope="col">CPF</th>
+														<th scope="col">Nome</th>
+														<th scope="col">Email</th>
+														<th class="col ats-col-icons">Ação</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<th scope="row"></th>
+														<td></td>
+														<td></td>
+														<td>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-trash"></i>
+															</a>
+														</td>
+													</tr>
+													<tr>
+														<th scope="row"></th>
+														<td></td>
+														<td></td>
+														<td>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-trash"></i>
+															</a>
+														</td>
+													</tr>
+													<tr>
+														<th scope="row"></th>
+														<td></td>
+														<td></td>
+														<td>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-trash"></i>
+															</a>
+														</td>
+													</tr>
+													<tr>
+														<th scope="row"></th>
+														<td></td>
+														<td></td>
+														<td>
+															<a href="#" class="ats-i-act">
+																<i class="icon-ats-trash"></i>
+															</a>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
 									</div>
 								</div>
 							</fieldset>
@@ -154,34 +218,35 @@
 								<div class="form-row">
 									<div class="form-group col">
 									    <label for="compJuntasDisponiveis">Junta Comercial de Destino</label>
-									    <select class="form-control" id="compJuntasDisponiveis">
-											<option>RO</option>
-											<option>AC</option>
-											<option>AM</option>
-											<option>RR</option>
-											<option>PA</option>
-											<option>AP</option>
-											<option>TO</option>
-											<option>MA</option>
-											<option>PI</option>
-											<option>CE</option>
-											<option>RN</option>
-											<option>PB</option>
-											<option>PE</option>
-											<option>AL</option>
-											<option>SE</option>
-											<option>BA</option>
-											<option>MG</option>
-											<option>ES</option>
-											<option>RJ</option>
-											<option>SP</option>
-											<option>PR</option>
-											<option>SC</option>
-											<option>RS</option>
-											<option>MT</option>
-											<option>GO</option>
-											<option>DF</option>
-											<option>MS</option>
+									    <select class="custom-select" id="compJuntasDisponiveis">
+											<option>Acre</option> 
+											<option>Alagoas</option> 
+											<option>Amapá</option> 
+											<option>Amazonas</option> 
+											<option>Bahia</option> 
+											<option>Ceará</option> 
+											<option>Distrito Federal</option> 
+											<option>Espírito Santo</option> 
+											<option>Goiás</option> 
+											<option>Maranhão</option> 
+											<option>Mato Grosso</option>
+											<option>Mato Grosso do Sul</option> 
+											<option>Minas</option>
+											<option>Gerais</option> 
+											<option>Pará</option> 
+											<option>Paraíba</option> 
+											<option>Paraná</option> 
+											<option>Pernambuco</option> 
+											<option>Piauí</option> 
+											<option>Rio de Janeiro</option> 
+											<option>Rio Grande do Norte</option> 
+											<option>Rio Grande do Sul</option> 
+											<option>Rondônia</option> 
+											<option>Roraima</option>
+											<option>Santa Catarina</option>
+											<option>São Paulo</option> 
+											<option>Sergipe</option> 
+											<option>Tocantins</option>
 									    </select>
 									</div>    
 								</div>
